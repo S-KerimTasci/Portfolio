@@ -1,0 +1,45 @@
+@mixin dFlex($jc: center, $ai: center, $g: 0){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+  }
+
+@mixin font($fw,$fs,$lh){
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}
+
+.ATF_background{
+    height: 100vh;
+    background: url("../../assets/img/VectorATF_BG.png");
+}
+
+.iAmDiv{
+    @include dFlex($g:35px);
+
+    position: fixed;
+    top: 297px;
+    left: 40%;
+}
+
+.iAm{
+    rotate: 270deg;
+
+    @include font(400,64px,76.9px )
+}
+
+.nameDiv{
+    @include dFlex();
+    flex-direction: column;
+}
+
+.kerimTasci{
+    @include font(700,90px,108px);
+}
+
+.frontendDev{
+    @include font(400,58px,69.6px);
+    color: #FF4747;
+}
