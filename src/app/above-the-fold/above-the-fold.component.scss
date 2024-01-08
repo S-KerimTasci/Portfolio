@@ -13,7 +13,11 @@
 
 .ATF_background{
     height: 100vh;
-    background: url("../../assets/img/VectorATF_BG.png");
+    // background: url("../../assets/img/VectorATF_BG.png");
+}
+
+.ATF_BG{
+    margin-top: 20%;
 }
 
 .iAmDiv{
@@ -42,4 +46,11 @@
 .frontendDev{
     @include font(400,58px,69.6px);
     color: #FF4747;
+}
+
+.ATF_profile{
+    height: 500px;
+    width: auto;
+    position: fixed;
+    top: 170px;
 }
