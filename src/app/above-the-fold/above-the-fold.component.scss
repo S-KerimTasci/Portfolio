@@ -22,9 +22,22 @@
         padding: 20px 40px 20px 40px};;
 }
 
+@keyframes zoomIcon {
+    from{
+        transform: scale(1)
+    };
+    to{
+        transform: scale(1.3);
+    }
+}
+
 .ATF_background {
     height: 100vh;
-    // background: url("../../assets/img/VectorATF_BG.png");
+    max-width: 100%;
+    background: url("../../assets/img/VectorATF_BG.png");
+    margin-top: 180px;
+    // background-size: 50%;
+    // background-repeat: no-repeat;
 }
 
 .ATF_BG {
@@ -35,7 +48,7 @@
     @include dFlex($g:25px);
     flex-direction: column;
 
-    position: fixed;
+    position: absolute;
     top: 297px;
     left: 40%;
 
@@ -86,8 +99,26 @@
 }
 
 .ATF_profile {
-    height: 500px;
+    height: 450px;
     width: auto;
-    position: fixed;
-    top: 170px;
+    position: absolute;
+    top: 160px;
+}
+
+.ATF_styleElement{
+    width: 100px;
+    border: 4px solid #FF4747
+}
+
+.socials{
+    @include dFlex($g:42px);
+
+    position: absolute;
+    top: 700px;
+}
+
+.ATF_icon{
+    &:hover{
+    animation: zoomIcon 250ms ease-in-out forwards;
+    }
 }
