@@ -1,54 +1,91 @@
-@mixin dFlex($jc: center, $ai: center, $g: 0){
+@mixin dFlex($jc: center, $ai: center, $g: 0) {
     display: flex;
     justify-content: $jc;
     align-items: $ai;
     gap: $g;
-  }
+}
 
-@mixin font($fw,$fs,$lh){
+@mixin font($fw, $fs, $lh) {
     font-weight: $fw;
     font-size: $fs;
     line-height: $lh;
 }
 
-.ATF_background{
+@keyframes buttonHover {
+    from{ background-color: #FA7902;
+        width: 165px;
+        height: 50px;
+        padding: 15px 30px 15px 30px;};
+    to{ background-color: #FF4747;
+        width: 185px;
+        height: 60px;
+        padding: 20px 40px 20px 40px};;
+}
+
+.ATF_background {
     height: 100vh;
     // background: url("../../assets/img/VectorATF_BG.png");
 }
 
-.ATF_BG{
+.ATF_BG {
     margin-top: 20%;
 }
 
-.iAmDiv{
-    @include dFlex($g:35px);
+.iAmDivWithBtn {
+    @include dFlex($g:25px);
+    flex-direction: column;
 
     position: fixed;
     top: 297px;
     left: 40%;
+
+    button {
+        background-color: #FA7902;
+        color: white;
+        width: 165px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        padding: 15px 30px 15px 30px;
+        box-shadow: 4px 4px 4px 0px #00000040;
+        margin-left: 111px;
+
+
+        @include font(400, 23px, 27.6px);
+        @include dFlex($g: 10px);
+
+        &:hover{
+            animation: buttonHover 250ms ease-in-out forwards;
+        }
+    }
 }
 
-.iAm{
+.iAmDiv {
+    @include dFlex($g: 35px);
+
+}
+
+.iAm {
     rotate: 270deg;
 
-    @include font(400,64px,76.9px )
+    @include font(400, 64px, 76.9px)
 }
 
-.nameDiv{
+.nameDiv {
     @include dFlex();
     flex-direction: column;
 }
 
-.kerimTasci{
-    @include font(700,90px,108px);
+.kerimTasci {
+    @include font(700, 90px, 108px);
 }
 
-.frontendDev{
-    @include font(400,58px,69.6px);
+.frontendDev {
+    @include font(400, 58px, 69.6px);
     color: #FF4747;
 }
 
-.ATF_profile{
+.ATF_profile {
     height: 500px;
     width: auto;
     position: fixed;
