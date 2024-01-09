@@ -1,1 +1,28 @@
 @import '../mixin&keyframe.scss';
+
+.aboutMeDiv{
+    padding-left: 100px;
+}
+
+.aboutMeText{
+    @include dFlex($ai:start);
+    flex-direction: column;
+    width: 471px;
+    img{
+        &:hover {
+            animation: zoomIcon 250ms ease-in-out forwards;
+        }
+    }
+}
+
+.AM_header{
+    @include font(700, 90px, 108px)
+}
+
+.AM_text{
+    @include font(400, 16px, 19.2px)
+}
+
+.imgWithText{
+    @include dFlex($g:35px)
+}
