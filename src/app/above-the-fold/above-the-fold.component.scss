@@ -34,7 +34,7 @@
         @include dFlex($g: 10px);
 
         &:hover {
-            animation: buttonHover 250ms ease-in-out forwards;
+            animation: ATF_buttonHover 250ms ease-in-out forwards;
         }
     }
 }
