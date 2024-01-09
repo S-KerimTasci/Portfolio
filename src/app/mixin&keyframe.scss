@@ -55,3 +55,14 @@
         transform: scale(1.3);
     }
 }
+
+@keyframes hoverUp {
+    from {
+        transform: translateY(0)
+    }
+
+
+    to {
+        transform: translateY(-10px);
+    }
+}
