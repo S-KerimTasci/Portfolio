@@ -1,5 +1,26 @@
 @import '../mixin&keyframe.scss';
 
+.mySkillsDiv {
+    margin-top: 100px;
+    @include dFlex($jc: space-between);
+    background: url("../../assets/img/MS_BG1.png");
+    background-repeat: no-repeat;
+}
+
+.iconDiv {
+    @include dFlex($jc:flex-start, $g: 123px);
+    width: 721px;
+    margin-left: 100px;
+    flex-wrap: wrap;
+    // column-gap: 123px;
+    row-gap: 50px;
+}
+
+.image-container {
+    @include dFlex();
+    flex-direction: column;
+}
+
 .textDiv {
     @include dFlex($g: 34px);
     flex-direction: column;

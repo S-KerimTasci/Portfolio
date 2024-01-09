@@ -1,5 +1,12 @@
 <div class="mySkillsDiv">
-    <div class="iconDiv"></div>
+
+    <div class="iconDiv">
+        <div *ngFor="let image of images; let i = index" class="image-container">
+            <img src="../../assets/img/mySkillsIcons/{{ image}}" alt="Image {{ i + 1 }}">
+            <p>{{ titles[i] }}</p>
+        </div>
+    </div>
+
     <div class="textDiv">
         <div class="MS_headerDiv">
             <span class="MS_header">My skills</span>
@@ -10,4 +17,5 @@
         </span>
         <button>Get in touch</button>
     </div>
+
 </div>
