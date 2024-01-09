@@ -1,11 +1,17 @@
 @import '../mixin&keyframe.scss';
 
 .aboutMeDiv{
+    @include dFlex($jc:space-between);
+
     padding-left: 100px;
+    background: url("../../assets/img/AM_BG1.png");
+    background-repeat: no-repeat;
+    background-position:top right;
 }
 
 .aboutMeText{
     @include dFlex($ai:start);
+
     flex-direction: column;
     width: 471px;
     img{
@@ -25,4 +31,22 @@
 
 .imgWithText{
     @include dFlex($g:35px)
+}
+
+.aboutMePicture{
+    @include dFlex();
+}
+.circle{
+    border: 8px solid #FA7902;
+    border-radius: 50%;
+    width: 453px;
+    height: 453px;
+    background: url("../../assets/img/ATF.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.line{
+    border: 4px solid #FA7902;
+    width: 267px;
 }
