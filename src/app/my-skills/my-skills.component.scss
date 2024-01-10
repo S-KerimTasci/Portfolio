@@ -31,6 +31,8 @@
     @include dFlex($g: 34px);
     flex-direction: column;
     width: 571px;
+    position: relative;
+    margin-bottom: 400px;
 
     button {
         background-color: #FA7902;
@@ -48,6 +50,10 @@
         &:hover {
             animation: MS_buttonHover 250ms ease-in-out forwards;
         }
+
+        position: absolute;
+        top: 214px;
+        
     }
 }
 
