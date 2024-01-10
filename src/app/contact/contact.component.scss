@@ -1,0 +1,36 @@
+@import '../mixin&keyframe.scss';
+
+.conatctHeaderDiv{
+    @include dFlex($jc:flex-start);
+    margin-bottom: 100px;
+}
+
+.conatctHeaderElement{
+    width: 50px;
+    border: 4px solid #FF4747
+}
+
+.conatctHeader{
+    @include font(700,90px,108px);
+    margin-left: 50px;
+}
+
+.contactDiv{
+    @include dFlex($jc:space-between);
+}
+
+.contactTextDiv{
+    @include dFlex($ai:start, $g:32px);
+    flex-direction: column;
+    width: 473px;
+    margin-left: 100px;
+}
+
+.contactTextH2{
+    @include font(700,32px,38.4px);
+}
+
+.contactForm{
+    @include dFlex();
+    flex-direction: column;
+}

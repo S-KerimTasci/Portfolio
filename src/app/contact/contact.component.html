@@ -1,0 +1,24 @@
+<div class="conatctHeaderDiv">
+    <div class="conatctHeaderElement"></div>
+    <span class="conatctHeader">Contact</span>
+</div>
+
+<div class="contactDiv">
+    <div class="contactTextDiv">
+        <span class="contactTextH2">Got a problem to solve?</span>
+        <span class="contactText">
+            Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
+            projects with my work.
+        </span>
+        <span class="contactText">
+            Need a Frontend developer? Contact me!
+        </span>
+    </div>
+
+    <form class="contactForm" (submit)="sendMail()" ngNativeValidate method="post">
+        <input required type="text" name="name" placeholder="Your name" #nameField>
+        <input required type="text" name="email" placeholder="Your email" #emailField>
+        <textarea required name="message" id="" cols="30" rows="10" placeholder="Your message" #messageField></textarea>
+        <button #sendButton>senden</button>
+    </form>
+</div>
