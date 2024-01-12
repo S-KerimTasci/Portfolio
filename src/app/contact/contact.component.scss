@@ -31,6 +31,8 @@
 }
 
 .contactForm{
-    @include dFlex();
+    @include dFlex($g:32px);
     flex-direction: column;
+    width: 617px;
+    height: 504px;
 }
