@@ -1,5 +1,54 @@
 @import '../mixin&keyframe.scss';
 
+.common-input-properties {
+    font-family: 'Poppins';
+    color: white;
+    @include font(400, 16px, 19.2px);
+    border: 1px solid #FF4747;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #141D2F, #141D2F),
+        linear-gradient(0deg, #FF4747, #FF4747);
+    padding: 15px 25px;
+    width: 100%;
+
+    &:not(:focus):required:invalid {
+        border: 1px solid #FF4747;
+    }
+
+    &:hover {
+        background: linear-gradient(0deg, #141D2F, #141D2F),
+            linear-gradient(0deg, #FA7902, #FA7902);
+        border: 1px solid #FA7902 !important;
+    }
+
+    &:focus {
+        background: linear-gradient(0deg, #141D2F, #141D2F),
+            linear-gradient(0deg, #FA7902, #FA7902);
+        border: 1px solid #FA7902 !important;
+    }
+
+    &:not(:focus):not(:placeholder-shown):required:invalid {
+        background: linear-gradient(0deg, #141D2F, #141D2F),
+            linear-gradient(0deg, #E61C40, #E61C40);
+        border: 1px solid red;
+
+    }
+
+    &:not(:focus):not(:placeholder-shown):required:valid {
+        background: linear-gradient(0deg, #141D2F, #141D2F),
+            linear-gradient(0deg, #70E61C, #70E61C);
+        border: 1px solid #70E61C
+    }
+}
+
+input {
+    @extend .common-input-properties;
+}
+
+textarea {
+    @extend .common-input-properties;
+}
+
 .conatctHeaderDiv {
     @include dFlex($jc: flex-start);
     margin-bottom: 100px;
@@ -47,67 +96,69 @@
         @include font(400, 14px, 16.8px)
     }
 
-    // &:not(:focus):not(:placeholder-shown):required:invalid {
-    //     input {
-    //         background: linear-gradient(0deg, #141D2F, #141D2F),
-    //             linear-gradient(0deg, #E61C40, #E61C40);
-    //         border: 1px solid red;
+    // input {
+    //     &:not(:focus):not(:placeholder-shown):required:invalid {
+    //             background: linear-gradient(0deg, #141D2F, #141D2F),
+    //                 linear-gradient(0deg, #E61C40, #E61C40);
+    //             border: 1px solid red;
+    //         }
     //     }
 
-    //     .contactFormElement>span {
-    //         display: flex !important;
-    //     }
-    // }
-}
 
-.checkboxDiv{
-    @include dFlex($jc: flex-start);
-    @include font(400, 14px, 16.8px);
-    width: 100%;
-    
-    label{
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-
-        &::before{
-            content: '';
-            width: 1em;
-            height: 1em;
-            border: 0.2em solid #FA7902;
-            margin-right: 0.5em;
-        }
-
-        &:hover::before{
-            background: #183771;
-        }
+        //     .contactFormElement>span {
+        //         display: flex !important;
+        //     }
+        // }
     }
 
-    input{
-        max-width: fit-content;
-        cursor: pointer;
-        opacity: 0;
-        position: absolute;
-
-        &:hover + label::before{
-            background: #183771;
-            box-shadow: 0 0 20px #183771;
-        }
-
-        &:checked + label::before{
-            content: '\002714';
-            @include dFlex();
-            color: #FA7902;
-        }
-    }
-
-    span {
-        color: #E61C40;
+    .checkboxDiv {
+        @include dFlex($jc: flex-start);
         @include font(400, 14px, 16.8px);
-        margin: 0 10px;
+        width: 100%;
 
-        &:hover{
-            text-decoration: underline;
+        label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: '';
+                width: 1em;
+                height: 1em;
+                border: 0.2em solid #FA7902;
+                margin-right: 0.5em;
+            }
+
+            &:hover::before {
+                background: #183771;
+            }
+        }
+
+        input {
+            max-width: fit-content;
+            cursor: pointer;
+            opacity: 0;
+            position: absolute;
+
+            &:hover+label::before {
+                background: #183771;
+                box-shadow: 0 0 20px #183771;
+            }
+
+            &:checked+label::before {
+                content: '\002714';
+                @include dFlex();
+                color: #FA7902;
+            }
+        }
+
+        span {
+            color: #E61C40;
+            @include font(400, 14px, 16.8px);
+            margin: 0 10px;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
-}
