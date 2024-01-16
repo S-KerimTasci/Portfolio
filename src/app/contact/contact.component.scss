@@ -1,38 +1,122 @@
 @import '../mixin&keyframe.scss';
 
-.conatctHeaderDiv{
-    @include dFlex($jc:flex-start);
+.conatctHeaderDiv {
+    @include dFlex($jc: flex-start);
     margin-bottom: 100px;
 }
 
-.conatctHeaderElement{
+.conatctHeaderElement {
     width: 50px;
     border: 4px solid #FF4747
 }
 
-.conatctHeader{
-    @include font(700,90px,108px);
+.conatctHeader {
+    @include font(700, 90px, 108px);
     margin-left: 50px;
 }
 
-.contactDiv{
-    @include dFlex($jc:space-between);
+.contactDiv {
+    @include dFlex($jc: space-between);
 }
 
-.contactTextDiv{
-    @include dFlex($ai:start, $g:32px);
+.contactTextDiv {
+    @include dFlex($ai: start, $g: 32px);
     flex-direction: column;
     width: 473px;
     margin-left: 100px;
 }
 
-.contactTextH2{
-    @include font(700,32px,38.4px);
+.contactTextH2 {
+    @include font(700, 32px, 38.4px);
 }
 
-.contactForm{
-    @include dFlex($g:32px);
+.contactForm {
+    @include dFlex($g: 32px);
     flex-direction: column;
     width: 617px;
     height: 504px;
+}
+
+.contactFormElement {
+    width: 100%;
+    @include dFlex($ai: flex-start, $g: 32px);
+    flex-direction: column;
+
+    span {
+        color: #E61C40;
+        @include font(400, 14px, 16.8px)
+    }
+
+    // &:not(:focus):not(:placeholder-shown):required:invalid {
+    //     input {
+    //         background: linear-gradient(0deg, #141D2F, #141D2F),
+    //             linear-gradient(0deg, #E61C40, #E61C40);
+    //         border: 1px solid red;
+    //     }
+
+    //     .contactFormElement>span {
+    //         display: flex !important;
+    //     }
+    // }
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #141D2F;
+    border: 2px solid #FA7902;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}
+
+.contactFormCheckbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+.contactFormCheckbox {
+    @include dFlex($jc: flex-start);
+    @include font(400, 14px, 16.8px);
+    width: 100%;
+    position: relative;
+
+    input {
+        max-width: fit-content;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    input:checked {
+        &~.checkmark:after {
+            display: block;
+        }
+    }
+
+    // span {
+    //     color: #E61C40;
+    // }
+
+    &:hover input~.checkmark {
+        background-color: #183771;
+    }
 }
