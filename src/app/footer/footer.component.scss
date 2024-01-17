@@ -1,0 +1,26 @@
+@import '../mixin&keyframe.scss';
+
+footer {
+    @include dFlex ($jc: space-between);
+    border-top: 4px solid #FA7902;
+    height: 291px;
+    padding:0 100px;
+
+    span{
+        @include font(400,23px,27.6px)
+    }
+}
+
+.imprintText{
+    @include font(400,16px,19.2px)
+}
+
+.ATF_icon {
+    &:hover {
+        animation: zoomIcon 250ms ease-in-out forwards;
+    }
+}
+
+.socials {
+    @include dFlex($g: 42px);
+}
