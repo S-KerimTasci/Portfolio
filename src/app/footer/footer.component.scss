@@ -12,7 +12,8 @@ footer {
 }
 
 .imprintText{
-    @include font(400,16px,19.2px)
+    @include font(400,16px,19.2px);
+    cursor: pointer;
 }
 
 .ATF_icon {

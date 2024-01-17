@@ -11,6 +11,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FooterComponent } from './footer/footer.component';
     MySkillsComponent,
     PortfolioComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ImprintComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
