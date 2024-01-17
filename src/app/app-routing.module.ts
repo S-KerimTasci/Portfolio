@@ -5,11 +5,11 @@ import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent },
-  {path: 'imprint', component: ImprintComponent }
+  {path: 'imprint', component: ImprintComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{ useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

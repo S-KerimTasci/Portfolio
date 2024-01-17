@@ -66,6 +66,7 @@ textarea {
 
 .contactDiv {
     @include dFlex($jc: space-between);
+    margin-bottom: 100px;
 }
 
 .contactTextDiv {
@@ -84,6 +85,22 @@ textarea {
     flex-direction: column;
     width: 617px;
     height: 504px;
+    position: relative;
+}
+
+.goUpBtn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    &:hover{
+        display: none;
+    }
+}
+
+.goUpBtnOrange{
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .contactFormElement {
