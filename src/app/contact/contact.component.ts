@@ -60,6 +60,10 @@ export class ContactComponent implements AfterViewInit {
     this.sendButtonVar.disabled = false;
   }
 
+
+  scrollTop(){
+    document.getElementById('ATF')?.scrollIntoView({behavior:'smooth'});
+  }
 }
 
 
