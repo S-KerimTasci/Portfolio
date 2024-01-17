@@ -45,6 +45,21 @@
     }
 }
 
+@keyframes Contact_buttonHover {
+    from {
+        width: 253px;
+        height: 58px;
+        padding: 15px 30px 15px 30px;
+    }
+
+
+    to {
+        width: 273px;
+        height: 78px;
+        padding: 20px 40px 20px 40px;
+    }
+}
+
 @keyframes zoomIcon {
     from {
         transform: scale(1)
