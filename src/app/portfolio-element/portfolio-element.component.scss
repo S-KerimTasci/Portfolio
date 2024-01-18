@@ -1,0 +1,54 @@
+@import '../mixin&keyframe.scss';
+
+.portfolioElementDiv {
+    @include dFlex();
+    height: 339.19px;
+}
+
+.portfolioElementTextDiv {
+    @include dFlex($ai: flex-start, $g: 35px);
+    flex-direction: column;
+}
+
+.header {
+    @include font(700, 32px, 38.4px);
+    color: #FF4747;
+}
+
+.skills {
+    @include font(400, 23px, 27.6px);
+    color: #FA7902;
+}
+
+.description {
+    @include font(400, 16px, 19.2px);
+}
+
+.buttonDiv {
+    @include dFlex($jc: flex-start, $g: 86px);
+
+    button {
+        @include dFlex($g: 10px);
+        @include font(400, 23px, 27.6px);
+        color: white;
+        padding: 15px 30px 15px 30px;
+        border-radius: 10px;
+
+        &:hover{
+            background-color: #FA7902;
+        }
+    }
+}
+
+.livetestBTN {
+    width: 152px;
+    height: 58px;
+    background: #FF4747;
+}
+
+.githubBTN {
+    width: 137px;
+    height: 58px;
+    border: 1px solid #FA7902;
+    background-color: transparent;
+}
