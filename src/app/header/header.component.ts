@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  scrollAboutMe(){
+    document.getElementById('aboutMe')?.scrollIntoView({behavior:'smooth'});
+  }
+
+  scrollSkill(){
+    document.getElementById('mySkills')?.scrollIntoView({behavior:'smooth'});
+  }
+
+  scrollPortfolio(){
+    document.getElementById('portfolio')?.scrollIntoView({behavior:'smooth'});
+  }
+
 }
