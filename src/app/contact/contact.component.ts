@@ -62,7 +62,7 @@ export class ContactComponent implements AfterViewInit {
 
 
   scrollTop(){
-    document.getElementById('ATF')?.scrollIntoView({behavior:'smooth'});
+    document.getElementById('ATF')?.scrollIntoView();
   }
 }
 

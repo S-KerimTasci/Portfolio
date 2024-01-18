@@ -1,9 +1,13 @@
 @import'../src/app/mixin&keyframe.scss';
 @import'./app/fonts.scss';
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 100px);
+}
+
 body {
   margin: 0;
-  scroll-behavior: smooth;
   background-color: #141D2F;
   color: white;
   font-family: 'Poppins';

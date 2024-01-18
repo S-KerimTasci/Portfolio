@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AboveTheFoldComponent {
 
   scrollBottom(){
-    document.getElementById('contact')?.scrollIntoView({behavior:'smooth'});
+    document.getElementById('contact')?.scrollIntoView();
   }
 
 }
