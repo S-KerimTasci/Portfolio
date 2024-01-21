@@ -1,5 +1,13 @@
 @import '../mixin&keyframe.scss';
 
+// to be done when more portfolio elements are added
+// .portDiv{
+//     background: url(../../assets/img/portfolioElementBG.png);
+//     background-repeat: no-repeat;
+//     background-position: right bottom;
+// }
+
+
 .port_headerDiv{
     @include dFlex($jc:flex-end, $g:10px);
 }

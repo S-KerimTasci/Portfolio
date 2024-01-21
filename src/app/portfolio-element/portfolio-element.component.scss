@@ -2,10 +2,17 @@
 
 .portfolioElementDiv {
     @include dFlex();
-    height: 339.19px;
+    height: 340px;
     margin-left: 100px;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.portfolioElementImgDiv {
+    img{
+        height: 340px;
+        width: auto;
+    }
 }
 
 .portfolioElementTextDiv {
