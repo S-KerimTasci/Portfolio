@@ -88,7 +88,7 @@ textarea {
     height: 504px;
     position: relative;
 
-    button{
+    button {
         @include font(400, 23px, 27.6px);
         @include dFlex();
         font-family: 'Poppins';
@@ -103,22 +103,23 @@ textarea {
         position: absolute;
         top: 500px;
 
-        &:hover{
+        &:hover {
             animation: Contact_buttonHover 250ms ease-in-out forwards;
         }
     }
 }
 
-.goUpBtn{
+.goUpBtn {
     position: absolute;
     right: 100px;
     bottom: -130px;
-    &:hover{
+
+    &:hover {
         display: none;
     }
 }
 
-.goUpBtnOrange{
+.goUpBtnOrange {
     position: absolute;
     right: 100px;
     bottom: -130px;
@@ -143,60 +144,92 @@ textarea {
     //     }
 
 
-        //     .contactFormElement>span {
-        //         display: flex !important;
-        //     }
-        // }
+    //     .contactFormElement>span {
+    //         display: flex !important;
+    //     }
+    // }
+}
+
+.checkboxDiv {
+    @include dFlex($jc: flex-start);
+    @include font(400, 14px, 16.8px);
+    width: 100%;
+
+    label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+            width: 1em;
+            height: 1em;
+            border: 0.2em solid #FA7902;
+            margin-right: 0.5em;
+        }
+
+        &:hover::before {
+            background: #183771;
+        }
     }
 
-    .checkboxDiv {
-        @include dFlex($jc: flex-start);
+    input {
+        max-width: fit-content;
+        cursor: pointer;
+        opacity: 0;
+        position: absolute;
+
+        &:hover+label::before {
+            background: #183771;
+            box-shadow: 0 0 20px #183771;
+        }
+
+        &:checked+label::before {
+            content: '\002714';
+            @include dFlex();
+            color: #FA7902;
+        }
+    }
+
+    span {
+        color: #E61C40;
         @include font(400, 14px, 16.8px);
-        width: 100%;
+        margin: 0 10px;
 
-        label {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-
-            &::before {
-                content: '';
-                width: 1em;
-                height: 1em;
-                border: 0.2em solid #FA7902;
-                margin-right: 0.5em;
-            }
-
-            &:hover::before {
-                background: #183771;
-            }
-        }
-
-        input {
-            max-width: fit-content;
-            cursor: pointer;
-            opacity: 0;
-            position: absolute;
-
-            &:hover+label::before {
-                background: #183771;
-                box-shadow: 0 0 20px #183771;
-            }
-
-            &:checked+label::before {
-                content: '\002714';
-                @include dFlex();
-                color: #FA7902;
-            }
-        }
-
-        span {
-            color: #E61C40;
-            @include font(400, 14px, 16.8px);
-            margin: 0 10px;
-
-            &:hover {
-                text-decoration: underline;
-            }
+        &:hover {
+            text-decoration: underline;
         }
     }
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 9;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
