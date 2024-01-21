@@ -27,21 +27,23 @@ export class ContactComponent implements AfterViewInit {
 
   async sendMail() {
 
+    //"https://@w01eb728.kasserver.com/send_mail/send_mail.php"
+
     this.disableForm();
 
     console.log('sending Mail')
 
     // loading spinner
 
-    // let fd = new FormData();
-    // fd.append('name', this.nameFieldVar.value)
-    // fd.append('email', this.emailFieldVar.value)
-    // fd.append('message', this.messageFieldVar.value)
-    // await fetch('xyz', {
-    //   method : 'POST'
-    // }
-    // )
-
+    let fd = new FormData();
+    fd.append('name', this.nameFieldVar.value);
+    //fd.append('email', this.emailFieldVar.value)
+    fd.append('message', this.messageFieldVar.value + ' ++++email: '+this.emailFieldVar.value) ;
+    await fetch('https://kerim-tasci.de/send_mail/send_mail.php', {
+      method : 'POST',
+      body: fd
+    }
+    )
     // Text anzeigen Nachticht gesendet 
     this.enableForm();
   }
