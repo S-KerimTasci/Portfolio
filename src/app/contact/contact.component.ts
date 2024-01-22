@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+//import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,8 @@ export class ContactComponent implements AfterViewInit {
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
   @ViewChild('formField') formField!: ElementRef;
+
+  // @Input() headerHeight: any;
 
 
   nameFieldVar: any;
@@ -71,7 +74,12 @@ export class ContactComponent implements AfterViewInit {
 
 
   scrollTop() {
+    // document.documentElement.style.setProperty('--scroll-padding',300 + 'px');
+    // console.log(document.documentElement.style.getPropertyValue('--scroll-padding'))
     document.getElementById('ATF')?.scrollIntoView();
+    // document.documentElement.style.setProperty('--scroll-padding', this.headerHeight - 1 + 'px');
+    // console.log(document.documentElement.style.getPropertyValue('--scroll-padding'))
+    // console.log(this.headerHeight)
   }
 }
 

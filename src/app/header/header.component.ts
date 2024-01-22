@@ -7,12 +7,12 @@ import { AfterViewInit, Component } from '@angular/core';
 })
 export class HeaderComponent implements AfterViewInit {
 
-  headerHight: any = '';
+  headerHeight: any = '';
 
   
   ngAfterViewInit() {
-    this.headerHight = document.getElementById('header')?.offsetHeight;
-    document.documentElement.style.setProperty('--scroll-padding', this.headerHight - 1 + 'px')
+    this.headerHeight = document.getElementById('header')?.offsetHeight;
+    document.documentElement.style.setProperty('--scroll-padding', this.headerHeight - 1 + 'px')
   }
 
   scrollAboutMe(){
