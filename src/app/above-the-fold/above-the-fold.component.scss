@@ -13,14 +13,20 @@
     margin-top: 20%;
 }
 
+.ATF_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .iAmDivWithBtn {
     @include dFlex($g: 25px);
     flex-direction: column;
+    margin-right: 100px;
 
-    position: absolute;
-    top: 397px;
-    //left: 40%;
-    right: 100px;
+    // position: absolute;
+    // top: 397px;
+    // right: 100px;
 
     button {
         background-color: #FA7902;
@@ -43,7 +49,7 @@
 }
 
 .iAmDiv {
-    @include dFlex($g: 35px);
+    @include dFlex();
 }
 
 .iAm {
@@ -71,8 +77,8 @@
 .ATF_profile {
     height: 705px;
     width: auto;
-    position: absolute;
-    top: 180px;
+    // position: absolute;
+    // top: 180px;
     z-index: -1;
     //left: 50px;
 }
@@ -83,10 +89,10 @@
 }
 
 .socials {
-    @include dFlex($g: 42px);
+    @include dFlex($jc: flex-start,$g: 42px);
 
-    position: absolute;
-    top: 900px;
+    //position: absolute;
+    //top: 850px;
 }
 
 .ATF_icon {
