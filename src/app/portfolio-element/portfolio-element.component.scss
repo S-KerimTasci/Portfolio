@@ -3,9 +3,10 @@
 .portfolioElementDiv {
     @include dFlex();
     height: 340px;
-    margin-left: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 100px;
+    // margin-left: 100px;
+    // margin-top: 50px;
+    // margin-bottom: 50px;
 }
 
 .portfolioElementImgDiv {
