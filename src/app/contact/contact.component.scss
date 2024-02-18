@@ -86,6 +86,7 @@ textarea {
     flex-direction: column;
     width: 617px;
     height: 504px;
+    margin-right: 100px;
     position: relative;
 
     button {
@@ -128,7 +129,7 @@ textarea {
 .contactFormElement {
     width: 100%;
     @include dFlex($ai: flex-start, $g: 32px);
-    flex-direction: column;
+    //flex-direction: column;
 
     span {
         color: #E61C40;
