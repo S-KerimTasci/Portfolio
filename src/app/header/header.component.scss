@@ -10,8 +10,6 @@
     right: 0;
     background-color: #141D2F;
     z-index: 99;
-    
-
 }
 
 // .logo{
@@ -33,3 +31,15 @@
         }
     }
 }
+
+@media (min-width: 1800px) {
+    .header{
+        margin: 0 10%;
+    }
+  }
+  
+  @media (min-width: 2400px) {
+    .header{
+        margin: 0 20%;
+    }
+  }

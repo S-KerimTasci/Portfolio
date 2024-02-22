@@ -31,3 +31,16 @@ button{
 .logo{
   cursor: pointer;
 }
+
+
+@media (min-width: 1800px) {
+  body{
+      margin: 0 10%;
+  }
+}
+
+@media (min-width: 2400px) {
+  body{
+      margin: 0 20%;
+  }
+}

@@ -32,7 +32,7 @@
     flex-direction: column;
     width: 571px;
     position: relative;
-    margin-bottom: 400px;
+    margin-bottom: 180px;
 
     button {
         background-color: #FA7902;
@@ -58,7 +58,10 @@
 }
 
 .MS_headerDiv {
-    @include dFlex($g: 34px);
+    //@include dFlex($g: 34px);
+    @include dFlex($jc: flex-end, $g:34px);
+
+    width: 100%;
 
 }
 
@@ -72,5 +75,44 @@
 }
 
 .MS_text {
-    @include font(400, 16px, 19.2px)
+    @include font(400, 16px, 19.2px);
+
+    margin-right:100px;
+    text-align: end;
 }
+
+@media (max-width: 1440px) {
+    .iconDiv {
+        @include dFlex($jc:flex-start, $g: 60px);
+
+        width: 540px;
+        row-gap: 50px;
+    }
+    
+    
+    .textDiv {
+        width: 540px;
+    }
+
+    .MS_header {
+        @include font(700, 80px, 108px)
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .iconDiv {
+        @include dFlex($jc:flex-start, $g: 60px);
+
+        width: 480px;
+        row-gap: 40px;
+    }
+    
+    
+    .textDiv {
+        width: 500px;
+    }
+
+    .MS_header {
+        @include font(700, 80px, 108px)
+    }
+  }

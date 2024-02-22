@@ -92,9 +92,6 @@
 .socials {
     @include dFlex($jc: flex-start,$g: 42px);
     margin-top: -20px;
-
-    //position: absolute;
-    //top: 850px;
 }
 
 .ATF_icon {
@@ -120,3 +117,54 @@
         cursor: pointer;
     }
 }
+
+
+@media (max-width: 1440px) {
+    .iAm {
+        @include font(400, 51px, 50.9px)
+    }
+    
+    .kerimTasci {
+        @include font(700, 74px, 60px);
+    }
+    
+    .frontendDev {
+        @include font(400, 42px, 55px);
+    }
+
+    .ATF_profile {
+        height: 600px;
+        width: auto;
+    }
+
+    .scroll {
+        @include font(400, 20px, 27.6px);
+        
+        top: 460px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .iAm {
+        @include font(400, 45px, 50.9px)
+    }
+    
+    .kerimTasci {
+        @include font(700, 50px, 60px);
+    }
+    
+    .frontendDev {
+        @include font(400, 32px, 55px);
+    }
+
+    .ATF_profile {
+        height: 550px;
+        width: auto;
+    }
+
+    .scroll {
+        @include font(400, 20px, 27.6px);
+        
+        top: 460px;
+    }
+  }

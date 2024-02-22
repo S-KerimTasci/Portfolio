@@ -192,13 +192,13 @@ textarea {
         }
     }
 
-    span {
+    a {
+        display: contents;
         color: #E61C40;
         @include font(400, 14px, 16.8px);
-        margin: 0 10px;
 
         &:hover {
-            text-decoration: underline;
+            text-decoration: underline !important;
         }
     }
 }
@@ -234,3 +234,37 @@ textarea {
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 1150px) {
+    .contactTextDiv {
+        @include dFlex($ai: start, $g: 32px);
+        width: 370px;
+    }
+
+    .contactForm {
+        @include dFlex($g: 32px);
+        width: 417px;
+        height: 504px;
+
+    
+        button {
+            @include font(400, 23px, 27.6px);
+            @include dFlex();
+            font-family: 'Poppins';
+            color: white;
+            width: 253px;
+            height: 58px;
+            padding: 15px 30px 15px 30px;
+            border-radius: 10px;
+            background: #FA7902;
+            box-shadow: 4px 4px 4px 0px #00000040;
+    
+            position: absolute;
+            top: 500px;
+    
+            &:hover {
+                animation: Contact_buttonHover 250ms ease-in-out forwards;
+            }
+        }
+    }
+  }
