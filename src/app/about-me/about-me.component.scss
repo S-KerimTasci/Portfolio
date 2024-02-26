@@ -118,3 +118,29 @@
         width: 70px;
     }
   }
+
+  @media (max-width: 840px) {
+    .aboutMeDiv{
+        @include dFlex();
+        flex-direction: column;
+    
+        padding-left: 25px;
+        padding-top: 25px;
+    }
+
+    .AM_header{
+        @include font(700, 45px, 54px)
+    }
+
+    .aboutMeText{
+        width: 500px;
+    }
+
+    .circle{
+        display: none;
+    }
+    
+    .line{
+        display: none;
+    }
+  }

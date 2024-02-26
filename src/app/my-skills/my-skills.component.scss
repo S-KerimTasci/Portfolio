@@ -1,7 +1,6 @@
 @import '../mixin&keyframe.scss';
 
 .mySkillsDiv {
-    //margin-top: 100px;
     @include dFlex($jc: space-between);
     background: url("../../assets/img/MS_BG1.png");
     background-repeat: no-repeat;
@@ -54,7 +53,6 @@
 
         position: absolute;
         top: 214px;
-        
     }
 }
 
@@ -88,7 +86,6 @@
         row-gap: 50px;
     }
     
-    
     .textDiv {
         width: 540px;
     }
@@ -105,7 +102,6 @@
         width: 480px;
         row-gap: 40px;
     }
-    
     
     .textDiv {
         width: 500px;
@@ -135,7 +131,6 @@
         };
     }
 
-
     .textDiv {
         width: 500px;
     }
@@ -145,5 +140,88 @@
     }
     .MS_header {
         @include font(700, 65px, 108px)
+    }
+  }
+
+  @media (max-width: 840px) {
+    .mySkillsDiv {
+        padding: 0 25px;
+        @include dFlex($jc: space-between);
+        flex-direction: column-reverse;
+    }
+
+    .iconDiv {
+        @include dFlex($jc:flex-start, $g: 55px);
+
+        width: 600px;
+        margin-left: 0;
+        row-gap: 35px;
+    }
+        
+    .image-container {
+        @include dFlex();
+        flex-direction: column;
+        width: 68px;
+        will-change: transform; 
+        img{
+            width: 50px;
+            height: auto
+        };
+    }
+
+    .textDiv {
+        width: 600px;
+
+        button {
+            width: 160px;
+            height: 55px;
+            padding: 15px 30px 15px 30px;
+    
+            @include font(400, 16px, 19.2px);
+    
+            &:hover {
+                animation: MS_buttonHover_res 250ms ease-in-out forwards;
+            }
+            top: 170px;
+        }
+    }
+
+    .MS_headerDiv {
+        @include dFlex($jc: flex-end, $g:15px);
+    }
+    .MS_header {
+        @include font(700, 45px, 54px)
+    }
+
+    .MS_headerElement {
+        display: none;
+    }
+
+    .MS_text {margin-right:0;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .iconDiv {
+        @include dFlex($jc:flex-start, $g: 55px);
+
+        width: 500px;
+        margin-left: 0;
+        row-gap: 35px;
+    }
+        
+    .image-container {
+        @include dFlex();
+        flex-direction: column;
+        width: 68px;
+        will-change: transform; 
+        img{
+            width: 50px;
+            height: auto
+        };
+    }
+
+    .textDiv {
+        width: 500px;
     }
   }

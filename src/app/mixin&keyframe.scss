@@ -28,6 +28,23 @@
     }
 }
 
+@keyframes ATF_buttonHover_res {
+    from {
+        background-color: #FA7902;
+        width: 133px;
+        height: 49px;
+        padding: 15px 30px 15px 30px;
+    }
+
+
+    to {
+        background-color: #FF4747;
+        width: 153px;
+        height: 59px;
+        padding: 20px 40px 20px 40px
+    }
+}
+
 @keyframes MS_buttonHover {
     from {
         background-color: #FA7902;
@@ -41,6 +58,23 @@
         background-color: #FF4747;
         width: 220px;
         height: 78px;
+        padding: 20px 40px 20px 40px
+    }
+}
+
+@keyframes MS_buttonHover_res {
+    from {
+        background-color: #FA7902;
+        width: 160px;
+        height: 55px;
+        padding: 15px 30px 15px 30px;
+    }
+
+
+    to {
+        background-color: #FF4747;
+        width: 170px;
+        height: 65px;
         padding: 20px 40px 20px 40px
     }
 }
