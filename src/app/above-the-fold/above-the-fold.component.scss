@@ -163,8 +163,33 @@
     }
 
     .scroll {
-        @include font(400, 20px, 27.6px);
+        @include font(400, 18px, 27.6px);
         
-        top: 460px;
+        top: 380px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .iAm {
+        @include font(400, 36px, 50.9px)
+    }
+    
+    .kerimTasci {
+        @include font(700, 45px, 60px);
+    }
+    
+    .frontendDev {
+        @include font(400, 25px, 40px);
+    }
+
+    .ATF_profile {
+        height: 460px;
+        width: auto;
+    }
+
+    .scroll {
+        @include font(400, 17px, 27.6px);
+        
+        top: 370px;
     }
   }

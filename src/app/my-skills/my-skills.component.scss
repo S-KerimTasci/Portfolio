@@ -1,10 +1,11 @@
 @import '../mixin&keyframe.scss';
 
 .mySkillsDiv {
-    margin-top: 100px;
+    //margin-top: 100px;
     @include dFlex($jc: space-between);
     background: url("../../assets/img/MS_BG1.png");
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .iconDiv {
@@ -58,11 +59,9 @@
 }
 
 .MS_headerDiv {
-    //@include dFlex($g: 34px);
     @include dFlex($jc: flex-end, $g:34px);
 
     width: 100%;
-
 }
 
 .MS_header {
@@ -114,5 +113,37 @@
 
     .MS_header {
         @include font(700, 80px, 108px)
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .iconDiv {
+        @include dFlex($jc:flex-start, $g: 55px);
+
+        width: 460px;
+        row-gap: 35px;
+    }
+        
+    .image-container {
+        @include dFlex();
+        flex-direction: column;
+        width: 68px;
+        will-change: transform; 
+        img{
+            width: 50px;
+            height: auto
+        };
+    }
+
+
+    .textDiv {
+        width: 500px;
+    }
+
+    .MS_headerDiv {
+        @include dFlex($jc: flex-end, $g:30px);
+    }
+    .MS_header {
+        @include font(700, 65px, 108px)
     }
   }
