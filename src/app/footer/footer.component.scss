@@ -11,6 +11,7 @@ footer {
     }
 }
 
+
 .imprintText{
     @include font(400,16px,19.2px);
     cursor: pointer;
@@ -24,4 +25,20 @@ footer {
 
 .socials {
     @include dFlex($g: 42px);
+}
+
+@media (max-width: 840px) {
+    footer {
+        @include dFlex ($jc: space-evenly);
+        flex-direction: column;
+        padding:0 25px;
+    
+        span{
+            @include font(400,23px,27.6px)
+        }
+    }
+
+    p{
+        text-align: center;
+    }
 }

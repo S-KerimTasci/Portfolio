@@ -50,7 +50,7 @@ textarea {
 }
 
 .conatctHeaderDiv {
-    @include dFlex($jc: flex-start);
+    @include dFlex($jc: flex-start, $g:50px);
     margin-bottom: 100px;
 }
 
@@ -61,7 +61,6 @@ textarea {
 
 .conatctHeader {
     @include font(700, 90px, 108px);
-    margin-left: 50px;
 }
 
 .contactDiv {
@@ -70,7 +69,7 @@ textarea {
     position: relative;
     background: url("../../assets/img/contactBG.png");
     background-repeat: no-repeat;
-    background-position:bottom left; 
+    background-position: bottom left;
 }
 
 .contactTextDiv {
@@ -249,21 +248,21 @@ textarea {
         width: 417px;
         height: 504px;
 
-    
+
         button {
             @include font(400, 23px, 27.6px);
             @include dFlex();
             width: 253px;
             height: 58px;
             padding: 15px 30px 15px 30px;
-    
+
             position: absolute;
             top: 500px;
         }
     }
-  }
+}
 
-  @media (max-width: 1000px) {
+@media (max-width: 1000px) {
     .contactTextDiv {
         @include dFlex($ai: start, $g: 32px);
         width: 240px;
@@ -274,14 +273,14 @@ textarea {
         width: 350px;
         height: 504px;
 
-    
+
         button {
             @include font(400, 23px, 27.6px);
             @include dFlex();
             width: 253px;
             height: 58px;
             padding: 15px 30px 15px 30px;
-    
+
             position: absolute;
             top: 500px;
         }
@@ -289,10 +288,85 @@ textarea {
 
     .checkboxDiv {
         @include font(400, 11px, 16.8px);
-    
+
         a {
             display: contents;
             @include font(400, 11px, 16.8px);
         }
     }
-  }
+}
+
+@media (max-width: 840px) {
+    .contactDiv {
+        @include dFlex();
+        flex-direction: column;
+        padding-bottom: 150px;
+        background: url("../../assets/img/contactBGres.png");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+
+    .conatctHeaderDiv {
+        @include dFlex($jc: flex-start, $g:10px);
+        margin-bottom: 50px;
+    }
+    
+    .conatctHeaderElement {
+        width: 25px;
+    }
+
+    .conatctHeader {
+        @include font(700, 45px, 54px);
+    }
+
+    .contactTextDiv {
+        @include dFlex($ai: start, $g: 32px);
+        width: 500px;
+        margin-left: 0;
+    }
+
+    .contactForm {
+        @include dFlex($g: 32px);
+        width: 500px;
+        height: 504px;
+        margin-right: 0;
+
+
+        button {
+            @include font(400, 16px, 19.2px);
+            width: 193px;
+            height: 55px;
+            padding: 15px 30px 15px 30px;
+            top: 500px;
+
+            &:hover {
+                animation: Contact_buttonHover_res 250ms ease-in-out forwards;
+            }
+        }
+    }
+
+    .checkboxDiv {
+        @include font(400, 11px, 16.8px);
+
+        a {
+            display: contents;
+            @include font(400, 11px, 16.8px);
+        }
+    }
+
+    .goUpBtn {
+        position: absolute;
+        right: 30px;
+        bottom: 50px;
+
+        &:hover {
+            display: none;
+        }
+    }
+
+    .goUpBtnOrange {
+        position: absolute;
+        right: 30px;
+        bottom: 50px;
+    }
+}
