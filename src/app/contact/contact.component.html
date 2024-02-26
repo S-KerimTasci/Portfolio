@@ -22,7 +22,7 @@
             <span class="d-none">Your name is required</span>
         </div>
         <div class="contactFormElement">
-            <input required type="email" name="message" placeholder="Your email" #emailField>
+            <input required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" type="email" name="message" placeholder="Your email" #emailField>
             <span class="d-none">Your email is required</span>
         </div>
         <div class="contactFormElement">
