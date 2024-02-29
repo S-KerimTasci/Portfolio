@@ -1,41 +1,11 @@
 @import '../mixin&keyframe.scss';
 
-.mySkillsDiv {
-    @include dFlex($jc: space-between);
-    background: url("../../assets/img/MS_BG1.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+.MS_button_res_div{
+    min-height: 80px;
 }
 
-.iconDiv {
-    @include dFlex($jc:flex-start, $g: 123px);
-    width: 721px;
-    margin-left: 100px;
-    flex-wrap: wrap;
-    row-gap: 50px;
-}
-
-.image-container {
-    @include dFlex();
-    flex-direction: column;
-    width: 88px;
-    will-change: transform; 
-    img{
-        &:hover {
-            animation: hoverUp 250ms ease-in-out forwards;
-        }
-    }
-}
-
-.textDiv {
-    @include dFlex($g: 34px);
-    flex-direction: column;
-    width: 571px;
-    position: relative;
-    margin-bottom: 180px;
-
-    button {
-        background-color: #FA7902;
+button{
+    background-color: #FA7902;
         color: white;
         width: 200px;
         height: 58px;
@@ -50,6 +20,46 @@
         &:hover {
             animation: MS_buttonHover 250ms ease-in-out forwards;
         }
+}
+
+
+.mySkillsDiv {
+    @include dFlex($jc: space-between);
+    background: url("../../assets/img/MS_BG1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.iconDiv {
+    @include dFlex($jc: flex-start, $g: 123px);
+    width: 721px;
+    margin-left: 100px;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+
+.image-container {
+    @include dFlex();
+    flex-direction: column;
+    width: 88px;
+    will-change: transform;
+
+    img {
+        &:hover {
+            animation: hoverUp 250ms ease-in-out forwards;
+        }
+    }
+}
+
+.textDiv {
+    @include dFlex($g: 34px);
+    flex-direction: column;
+    width: 571px;
+    position: relative;
+    margin-bottom: 180px;
+
+    button {
+        
 
         position: absolute;
         top: 214px;
@@ -57,7 +67,7 @@
 }
 
 .MS_headerDiv {
-    @include dFlex($jc: flex-end, $g:34px);
+    @include dFlex($jc: flex-end, $g: 34px);
 
     width: 100%;
 }
@@ -74,18 +84,31 @@
 .MS_text {
     @include font(400, 16px, 19.2px);
 
-    margin-right:100px;
+    margin-right: 100px;
     text-align: end;
+}
+
+.MS_button_res {
+    display: none;
+    width: 160px;
+    height: 55px;
+    padding: 15px 30px 15px 30px;
+
+    @include font(400, 16px, 19.2px);
+
+    &:hover {
+        animation: MS_buttonHover_res 250ms ease-in-out forwards;
+    }
 }
 
 @media (max-width: 1440px) {
     .iconDiv {
-        @include dFlex($jc:flex-start, $g: 60px);
+        @include dFlex($jc: flex-start, $g: 60px);
 
         width: 540px;
         row-gap: 50px;
     }
-    
+
     .textDiv {
         width: 540px;
     }
@@ -93,16 +116,16 @@
     .MS_header {
         @include font(700, 80px, 108px)
     }
-  }
+}
 
-  @media (max-width: 1200px) {
+@media (max-width: 1200px) {
     .iconDiv {
-        @include dFlex($jc:flex-start, $g: 60px);
+        @include dFlex($jc: flex-start, $g: 60px);
 
         width: 480px;
         row-gap: 40px;
     }
-    
+
     .textDiv {
         width: 500px;
     }
@@ -110,40 +133,48 @@
     .MS_header {
         @include font(700, 80px, 108px)
     }
-  }
+}
 
-  @media (max-width: 1000px) {
+@media (max-width: 1000px) {
     .iconDiv {
-        @include dFlex($jc:flex-start, $g: 55px);
+        @include dFlex($jc: flex-start, $g: 55px);
 
         width: 460px;
         row-gap: 35px;
     }
-        
+
     .image-container {
         @include dFlex();
         flex-direction: column;
         width: 68px;
-        will-change: transform; 
-        img{
+        will-change: transform;
+
+        img {
             width: 50px;
             height: auto
-        };
+        }
+
+        ;
     }
 
     .textDiv {
         width: 500px;
+
+        button {
+            top: 230px;
+        }
     }
 
     .MS_headerDiv {
-        @include dFlex($jc: flex-end, $g:30px);
+        @include dFlex($jc: flex-end, $g: 30px);
     }
+
     .MS_header {
         @include font(700, 65px, 108px)
     }
-  }
+}
 
-  @media (max-width: 840px) {
+@media (max-width: 840px) {
     .mySkillsDiv {
         padding: 0 25px;
         @include dFlex($jc: space-between);
@@ -151,44 +182,51 @@
     }
 
     .iconDiv {
-        @include dFlex($jc:flex-start, $g: 55px);
+        @include dFlex($jc: flex-start, $g: 55px);
 
         width: 600px;
         margin-left: 0;
         row-gap: 35px;
     }
-        
+
     .image-container {
         @include dFlex();
         flex-direction: column;
         width: 68px;
-        will-change: transform; 
-        img{
+        will-change: transform;
+
+        img {
             width: 50px;
             height: auto
-        };
+        }
+
+        ;
     }
 
     .textDiv {
         width: 600px;
+        margin-bottom: 100px;
 
         button {
-            width: 160px;
-            height: 55px;
-            padding: 15px 30px 15px 30px;
-    
-            @include font(400, 16px, 19.2px);
-    
-            &:hover {
-                animation: MS_buttonHover_res 250ms ease-in-out forwards;
-            }
-            top: 170px;
+            display: none;
+            // width: 160px;
+            // height: 55px;
+            // padding: 15px 30px 15px 30px;
+
+            // @include font(400, 16px, 19.2px);
+
+            // &:hover {
+            //     animation: MS_buttonHover_res 250ms ease-in-out forwards;
+            // }
+
+            // top: 170px;
         }
     }
 
     .MS_headerDiv {
-        @include dFlex($jc: flex-end, $g:15px);
+        @include dFlex($jc: flex-end, $g: 15px);
     }
+
     .MS_header {
         @include font(700, 45px, 54px)
     }
@@ -197,31 +235,39 @@
         display: none;
     }
 
-    .MS_text {margin-right:0;
+    .MS_text {
+        margin-right: 0;
     }
-  }
 
-  @media (max-width: 550px) {
+    .MS_button_res {
+        display: unset;
+    }
+}
+
+@media (max-width: 550px) {
     .iconDiv {
-        @include dFlex($jc:flex-start, $g: 55px);
+        @include dFlex($jc: flex-start, $g: 55px);
 
         width: 500px;
         margin-left: 0;
         row-gap: 35px;
     }
-        
+
     .image-container {
         @include dFlex();
         flex-direction: column;
         width: 68px;
-        will-change: transform; 
-        img{
+        will-change: transform;
+
+        img {
             width: 50px;
             height: auto
-        };
+        }
+
+        ;
     }
 
     .textDiv {
         width: 500px;
     }
-  }
+}

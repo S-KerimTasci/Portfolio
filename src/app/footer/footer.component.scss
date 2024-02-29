@@ -17,6 +17,12 @@ footer {
     cursor: pointer;
 }
 
+.imprintTextRes{
+    @include font(400,16px,19.2px);
+    cursor: pointer;
+    display: none;
+}
+
 .ATF_icon {
     &:hover {
         animation: zoomIcon 250ms ease-in-out forwards;
@@ -40,5 +46,22 @@ footer {
 
     p{
         text-align: center;
+    }
+
+    .socials {
+        @include dFlex($jc:space-between);
+        width: 175px;
+    }
+
+    .imprintText{
+        @include font(400,16px,19.2px);
+        cursor: pointer;
+        display: none
+    }
+    
+    .imprintTextRes{
+        @include font(400,16px,19.2px);
+        cursor: pointer;
+        display: unset;
     }
 }
