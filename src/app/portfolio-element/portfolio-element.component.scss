@@ -7,7 +7,7 @@
 }
 
 .portfolioElementImgDiv {
-    img{
+    img {
         height: 340px;
         width: auto;
     }
@@ -42,7 +42,7 @@
         padding: 15px 30px 15px 30px;
         border-radius: 10px;
 
-        &:hover{
+        &:hover {
             background-color: #FA7902;
         }
     }
@@ -63,12 +63,12 @@
 
 @media (max-width: 1200px) {
     .portfolioElementImgDiv {
-        img{
+        img {
             height: auto;
             width: 380px;
         }
     }
-    
+
     .buttonDiv {
         button {
             @include font(400, 16px, 27.6px);
@@ -80,16 +80,16 @@
         width: 120px;
         height: 50px;
     }
-    
+
     .githubBTN {
         width: 105px;
         height: 50px;
     }
-  }
+}
 
 @media (max-width: 1000px) {
     .portfolioElementImgDiv {
-        img{
+        img {
             height: auto;
             width: 380px;
         }
@@ -102,14 +102,14 @@
     .header {
         @include font(700, 30px, 38.4px);
     }
-    
+
     .skills {
         @include font(400, 21px, 27.6px);
     }
-    
+
     .buttonDiv {
         @include dFlex($jc: flex-start, $g: 36px);
-    
+
         button {
             @include font(400, 16px, 27.6px);
             padding: 10px 25px 10px 25px;
@@ -120,9 +120,21 @@
         width: 120px;
         height: 50px;
     }
-    
+
     .githubBTN {
         width: 105px;
         height: 50px;
     }
-  }
+}
+
+@media (max-width: 840px) {
+    .portfolioElementDiv {
+        flex-direction: column !important;
+        height: fit-content;
+        margin: 25px 50px;
+    }
+
+    .portfolioElementTextDiv {
+        @include dFlex($g: 27px);
+    }
+}
