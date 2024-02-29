@@ -248,3 +248,62 @@
         display: none;
     }
   }
+
+  @media (max-width: 550px) {
+    .ATF_background {
+        background: url("../../assets/img/VectorATF_BG_responsiveXS.png");
+        margin-top: 140px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .ATF_content{
+        @include dFlex();
+        flex-direction: column
+    }
+
+    .iAmDivWithBtn {
+        @include dFlex($g: 25px);
+        flex-direction: column;
+        margin-right: 0px;
+        padding-bottom: 60px;
+    
+        button {
+            width: 133px;
+            height: 49px;
+            padding: 15px 30px 15px 30px;
+            margin-left: 59px;
+    
+            @include font(400, 16px, 19.2px);
+    
+            &:hover {
+                animation: ATF_buttonHover_res 250ms ease-in-out forwards;
+            }
+        }
+    }
+
+    .iAm {
+        @include font(400, 30px, 50.9px)
+    }
+    
+    .kerimTasci {
+        @include font(700, 28px, 40px);
+    }
+    
+    .frontendDev {
+        @include font(400, 19px, 35px);
+    }
+
+    .ATF_profile {
+        height: 330px;
+        width: auto;
+    }
+
+    .socials_mail{
+        display: none;
+    }
+
+    .scroll {
+        display: none;
+    }
+  }
