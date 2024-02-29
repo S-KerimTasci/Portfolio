@@ -2,3 +2,15 @@
     margin-top: 180px;
     padding-left: 100px;
 }
+
+@media (max-width: 840px) {
+    .imprintDiv{
+        padding: 0 35px;
+    }
+}
+
+@media (max-width: 550px) {
+    .imprintDiv{
+        padding: 0 35px;
+    }
+}
