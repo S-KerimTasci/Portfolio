@@ -31,18 +31,22 @@ export class HeaderComponent implements AfterViewInit {
 
   scrollAboutMe(){
     document.getElementById('aboutMe')?.scrollIntoView();
+    this.closeResponsiveMenu();
   }
 
   scrollSkill(){
     document.getElementById('mySkills')?.scrollIntoView();
+    this.closeResponsiveMenu();
   }
 
   scrollPortfolio(){
     document.getElementById('portfolio')?.scrollIntoView();
+    this.closeResponsiveMenu();
   }
 
   scrollBottom(){
     document.getElementById('contact')?.scrollIntoView();
+    this.closeResponsiveMenu();
   }
 
 }
