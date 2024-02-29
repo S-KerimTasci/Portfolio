@@ -138,3 +138,12 @@
         @include dFlex($g: 27px);
     }
 }
+
+@media (max-width: 550px) {
+    .portfolioElementImgDiv {
+        img {
+            height: auto;
+            width: 290px;
+        }
+    }
+}
