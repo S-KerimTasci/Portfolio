@@ -18,11 +18,15 @@ export class HeaderComponent implements AfterViewInit {
   openResponsiveMenu(){
     document.getElementById('header_res_menu')?.classList.remove('d-none')
     document.getElementById('body')?.classList.add('overflowHidden')
+    document.getElementById('open_menu')?.classList.add('d-none')
+    document.getElementById('close_menu')?.classList.remove('d-none')
   }
 
   closeResponsiveMenu(){
     document.getElementById('header_res_menu')?.classList.add('d-none')
     document.getElementById('body')?.classList.remove('overflowHidden')
+    document.getElementById('open_menu')?.classList.remove('d-none')
+    document.getElementById('close_menu')?.classList.add('d-none')
   }
 
   scrollAboutMe(){
@@ -35,6 +39,10 @@ export class HeaderComponent implements AfterViewInit {
 
   scrollPortfolio(){
     document.getElementById('portfolio')?.scrollIntoView();
+  }
+
+  scrollBottom(){
+    document.getElementById('contact')?.scrollIntoView();
   }
 
 }
