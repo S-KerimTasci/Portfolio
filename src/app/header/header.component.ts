@@ -15,6 +15,16 @@ export class HeaderComponent implements AfterViewInit {
     document.documentElement.style.setProperty('--scroll-padding', this.headerHeight - 1 + 'px')
   }
 
+  openResponsiveMenu(){
+    document.getElementById('header_res_menu')?.classList.remove('d-none')
+    document.getElementById('body')?.classList.add('overflowHidden')
+  }
+
+  closeResponsiveMenu(){
+    document.getElementById('header_res_menu')?.classList.add('d-none')
+    document.getElementById('body')?.classList.remove('overflowHidden')
+  }
+
   scrollAboutMe(){
     document.getElementById('aboutMe')?.scrollIntoView();
   }

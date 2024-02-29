@@ -1,5 +1,12 @@
 @import '../mixin&keyframe.scss';
 
+a {
+    &:hover {
+        color: #FA7902;
+        text-decoration: underline #FF4747;
+    }
+}
+
 .header {
     @include dFlex($jc: space-between);
 
@@ -24,13 +31,23 @@
     font-weight: 400;
     font-size: 23px;
     line-height: 27.6px;
+}
 
-    a {
-        &:hover {
-            color: #FA7902;
-            text-decoration: underline #FF4747;
-        }
-    }
+.header_res_menu{
+    @include dFlex();
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background: rgba(65, 72, 86);
+    margin-top: 80px;
+}
+
+.links_res{
+    @include dFlex($jc:space-evenly);
+    flex-direction: column;
+    width: 115px;
+    height: 215px;
 }
 
 .menu {
