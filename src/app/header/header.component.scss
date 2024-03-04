@@ -55,7 +55,7 @@ a {
     padding-top: 100px;
 }
 
-.menu {
+.menu_div {
     display: none;
 }
 
@@ -81,7 +81,7 @@ a {
         display: none;
     }
 
-    .menu {
+    .menu_div {
         display: block;
 
         &:hover {

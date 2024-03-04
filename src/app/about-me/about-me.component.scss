@@ -145,7 +145,7 @@
     }
   }
 
-  @media (max-width: 840px) {
+  @media (max-width: 550px) {
     .aboutMeDiv{
         @include dFlex();
         flex-direction: column;

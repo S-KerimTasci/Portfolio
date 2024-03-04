@@ -14,7 +14,7 @@
 }
 
 .ATF_content{
-    @include dFlex($ai: space-between);
+    @include dFlex();
     position: relative;
 }
 
@@ -89,7 +89,7 @@
 
 .socials {
     @include dFlex($jc: flex-start,$g: 42px);
-    margin-top: -20px;
+    //margin-top: -20px;
 }
 
 .ATF_icon {

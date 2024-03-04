@@ -1,4 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,11 @@ export class HeaderComponent implements AfterViewInit {
 
   headerHeight: any = '';
 
+  constructor(private router: Router) { }
+
+  navigateToRoute(route: string) {
+    this.router.navigateByUrl(route);
+  }
   
   ngAfterViewInit() {
     this.headerHeight = document.getElementById('header')?.offsetHeight;
@@ -30,21 +36,25 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   scrollAboutMe(){
+    this.navigateToRoute('')
     document.getElementById('aboutMe')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
 
   scrollSkill(){
+    this.navigateToRoute('')
     document.getElementById('mySkills')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
 
   scrollPortfolio(){
+    this.navigateToRoute('')
     document.getElementById('portfolio')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
 
   scrollBottom(){
+    this.navigateToRoute('')
     document.getElementById('contact')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
