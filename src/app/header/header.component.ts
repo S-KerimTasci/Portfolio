@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeaderComponent {
 
   headerHeight: any = '';
 
@@ -16,7 +16,7 @@ export class HeaderComponent implements AfterViewInit {
     this.router.navigateByUrl(route);
   }
   
-  ngAfterViewInit() {
+  setHeaderHeight(){
     this.headerHeight = document.getElementById('header')?.offsetHeight;
     document.documentElement.style.setProperty('--scroll-padding', this.headerHeight - 1 + 'px')
   }
@@ -36,27 +36,30 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   scrollAboutMe(){
+    this.setHeaderHeight();
     this.navigateToRoute('')
     document.getElementById('aboutMe')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
 
   scrollSkill(){
+    this.setHeaderHeight();
     this.navigateToRoute('')
     document.getElementById('mySkills')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
 
   scrollPortfolio(){
+    this.setHeaderHeight();
     this.navigateToRoute('')
     document.getElementById('portfolio')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
 
   scrollBottom(){
+    this.setHeaderHeight();
     this.navigateToRoute('')
     document.getElementById('contact')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
-
 }
