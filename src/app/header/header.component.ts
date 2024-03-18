@@ -35,30 +35,30 @@ export class HeaderComponent {
     document.getElementById('close_menu')?.classList.add('d-none')
   }
 
-  scrollAboutMe(){
+  async scrollAboutMe(){
     this.setHeaderHeight();
-    this.navigateToRoute('')
+    await this.navigateToRoute('')
     document.getElementById('aboutMe')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
 
-  scrollSkill(){
+  async scrollSkill(){
     this.setHeaderHeight();
-    this.navigateToRoute('')
+    await this.navigateToRoute('')
     document.getElementById('mySkills')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
 
-  scrollPortfolio(){
+  async scrollPortfolio(){
     this.setHeaderHeight();
-    this.navigateToRoute('')
+    await this.navigateToRoute('')
     document.getElementById('portfolio')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
 
-  scrollBottom(){
+  async scrollBottom(){
     this.setHeaderHeight();
-    this.navigateToRoute('')
+    await this.navigateToRoute('')
     document.getElementById('contact')?.scrollIntoView();
     this.closeResponsiveMenu();
   }
