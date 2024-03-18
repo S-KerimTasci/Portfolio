@@ -8,8 +8,8 @@
     <div class="contactTextDiv">
         <span class="contactTextH2">Got a problem to solve?</span>
         <span class="contactText">
-            Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
-            projects with my work.
+            Contact me through this form. I am looking forward to hearing from you. I would like to learn about your
+            ideas and contribute to your projects with my work.
         </span>
         <span class="contactText">
             Need a Frontend developer? <b>Contact me!</b>
@@ -22,7 +22,8 @@
             <span class="d-none">Your name is required</span>
         </div>
         <div class="contactFormElement">
-            <input required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" type="email" name="message" placeholder="Your email" #emailField>
+            <input required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" type="email" name="message"
+                placeholder="Your email" #emailField>
             <span class="d-none">Your email is required</span>
         </div>
         <div class="contactFormElement">
@@ -33,8 +34,9 @@
 
         <div class="checkboxDiv">
             <input required type="checkbox" id="cb1">
-            <label for="cb1">I've read the <a routerLink="imprint">privacy policy</a> and agree to the processing of my data as
-                outlined.</label>
+            <label for="cb1">
+                I've read the <a routerLink="imprint">privacy policy</a> and agree to the processing of my
+                data as outlined.</label>
         </div>
         <button #sendButton>Send message</button>
     </form>
