@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { SharedDataService } from '../shared-data-headerHeight.service';
 
 @Component({
   selector: 'app-contact',
@@ -18,12 +19,20 @@ export class ContactComponent implements AfterViewInit {
   messageFieldVar: any;
   sendButtonVar: any;
 
+  headerHeight: number = 0;
+
+  constructor(private sharedDataService: SharedDataService) { }
+
 
   ngAfterViewInit(): void {
     this.nameFieldVar = this.nameField.nativeElement;
     this.emailFieldVar = this.emailField.nativeElement;
     this.messageFieldVar = this.messageField.nativeElement;
     this.sendButtonVar = this.sendButton.nativeElement
+
+    this.sharedDataService.headerHeight$.subscribe((height) => {
+      this.headerHeight = height;
+    });
   }
 
 
@@ -63,7 +72,7 @@ export class ContactComponent implements AfterViewInit {
   }
 
 
-  resetForm(){
+  resetForm() {
     this.nameFieldVar.value = '';
     this.emailFieldVar.value = '';
     this.messageFieldVar.value = '';
@@ -71,7 +80,9 @@ export class ContactComponent implements AfterViewInit {
 
 
   scrollTop() {
-    document.documentElement.style.setProperty('--scroll-padding', 500 + 'px')
+    document.documentElement.style.setProperty('--scroll-padding', this.headerHeight - 1 + 'px');
+    console.log(this.headerHeight);
+
     document.getElementById('ATF')?.scrollIntoView();
   }
 }

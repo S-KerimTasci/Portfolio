@@ -4,9 +4,9 @@
     </div>
 
     <div class="links">
-        <a (click)="scrollAboutMe()">About me</a>
-        <a (click)="scrollSkill()">Skills</a>
-        <a (click)="scrollPortfolio()">Portfolio</a>
+        <a routerLink="" fragment="aboutMe">About me</a>
+        <a routerLink="" fragment="mySkills">Skills</a>
+        <a routerLink="" fragment="portfolio">Portfolio</a>
     </div>
 
     <div class="menu_div">
@@ -17,9 +17,9 @@
 
 <div id="header_res_menu" class="header_res_menu d-none">
     <div class="links_res">
-        <a routerLink="" (click)="scrollAboutMe()">About me</a>
-        <a (click)="scrollSkill()">Skills</a>
-        <a (click)="scrollPortfolio()">Portfolio</a>
-        <a (click)="scrollBottom()">Contact</a>
+        <a routerLink="" fragment="aboutMe" (click)="closeResponsiveMenu()">About me</a>
+        <a routerLink="" fragment="mySkills" (click)="closeResponsiveMenu()">Skills</a> 
+        <a routerLink="" fragment="portfolio" (click)="closeResponsiveMenu()">Portfolio</a>
+        <a routerLink="" fragment="contact" (click)="closeResponsiveMenu()">Contact</a>
     </div>
 </div>
