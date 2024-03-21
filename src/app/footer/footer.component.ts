@@ -32,7 +32,6 @@ export class FooterComponent implements OnInit, AfterViewInit {
       this.headerHeight = height;
     });
     await document.documentElement.style.setProperty('--scroll-padding', this.headerHeight - 1 + 'px');
-    console.log(this.headerHeight);
     document.getElementById(section)?.scrollIntoView();
   }
 

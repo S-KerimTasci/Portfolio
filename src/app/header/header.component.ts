@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SharedDataService } from '../shared-data-headerHeight.service';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit {
   headerHeight: any = '';
   activeRoute :ActivatedRoute = inject(ActivatedRoute);
 
-  constructor(private router: Router, private sharedDataService: SharedDataService) { }
+  constructor(private router: Router, private sharedDataService: SharedDataService,public translationService: TranslationService) { }
 
   ngOnInit() {
     this.headerHeight = document.getElementById('header')?.offsetHeight;
@@ -48,4 +49,5 @@ export class HeaderComponent implements OnInit {
     document.getElementById('open_menu')?.classList.remove('d-none')
     document.getElementById('close_menu')?.classList.add('d-none')
   }
+
 }

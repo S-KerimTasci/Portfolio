@@ -5,7 +5,7 @@
     <div class="portfolioElementTextDiv">
         <span class="header">{{ title }}</span>
         <span class="skills">{{ skills }}</span>
-        <span class="description">{{ description }}</span>
+        <span id="{{ id }}" class="description">{{ description }}</span>
         <div class="buttonDiv">
             <button (click)="visitPage(livelink)" class="livetestBTN">Live test</button>
             <button (click)="visitPage(githublink)" class="githubBTN">Github</button>

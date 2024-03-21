@@ -1,12 +1,13 @@
 <header class="header" id="header">
-    <div class="logo" routerLink="">
+    <div class="logo" routerLink="" fragment="ATF">
         <img src="../../assets/img/logo.png">
     </div>
 
     <div class="links">
-        <a routerLink="" fragment="aboutMe">About me</a>
+        <a routerLink="" fragment="aboutMe" id="header_AM">Über mich</a>
         <a routerLink="" fragment="mySkills">Skills</a>
         <a routerLink="" fragment="portfolio">Portfolio</a>
+        <img (click)="translationService.translate()" src="../../assets/img/translate.png" alt="translate">
     </div>
 
     <div class="menu_div">
@@ -17,9 +18,10 @@
 
 <div id="header_res_menu" class="header_res_menu d-none">
     <div class="links_res">
-        <a routerLink="" fragment="aboutMe" (click)="closeResponsiveMenu()">About me</a>
+        <a id="res_header_AM" routerLink="" fragment="aboutMe" (click)="closeResponsiveMenu()">Über mich</a>
         <a routerLink="" fragment="mySkills" (click)="closeResponsiveMenu()">Skills</a> 
         <a routerLink="" fragment="portfolio" (click)="closeResponsiveMenu()">Portfolio</a>
-        <a routerLink="" fragment="contact" (click)="closeResponsiveMenu()">Contact</a>
+        <a routerLink="" fragment="contact" (click)="closeResponsiveMenu()" id="contact">Kontakt</a>
+        <img (click)="translationService.translate()" src="../../assets/img/translate.png" alt="translate">
     </div>
 </div>

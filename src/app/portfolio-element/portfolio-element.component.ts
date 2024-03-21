@@ -15,6 +15,7 @@ export class PortfolioElementComponent {
   @Input() imgALT: string = '';
   @Input() title: string = '';
   @Input() skills: string = '';
+  @Input() id: string = '';
   @Input() description: string = '';
   @Input() livelink: string = '';
   @Input() githublink: string = '';

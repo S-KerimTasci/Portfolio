@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { SharedDataService } from '../shared-data-headerHeight.service';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-contact',
@@ -21,7 +22,7 @@ export class ContactComponent implements AfterViewInit {
 
   headerHeight: number = 0;
 
-  constructor(private sharedDataService: SharedDataService) { }
+  constructor(private sharedDataService: SharedDataService, public translationService: TranslationService) { }
 
 
   ngAfterViewInit(): void {

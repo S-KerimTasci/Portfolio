@@ -4,21 +4,48 @@
         <span class="port_header">Portfolio</span>
         <div class="port_headerelement2"></div>
     </div>
-    <span class="port_text">This page is a sample of my work! Scroll down to view other projects I have developed.</span>
+    <span class="port_text" id="port_text">
+        Diese Seite zeigt eine Auswahl meiner Arbeit! Scrollen Sie nach unten, um einige meiner Projekte anzusehen.
+    </span>
 
-    <app-portfolio-element fd="row" imgURL="../../assets/img/join photojoin.png" title="Join"
+    @if (translationService.isGerman) {
+        <app-portfolio-element fd="row" imgURL="../../assets/img/join photojoin.png" title="Join"
         skills="JavaScript | HTML | CSS"
+        id="description1"
+        description="Ein Aufgaben Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen und weisen Sie diesen Benutzern und Kategorien zu."
+        livelink="https://kerim-tasci.developerakademie.net/JoinPrivat/html/login.html"
+        githublink="https://github.com/S-KerimTasci/Join-Privat">
+        </app-portfolio-element>
+    }@else {
+        <app-portfolio-element fd="row" imgURL="../../assets/img/join photojoin.png" title="Join"
+        skills="JavaScript | HTML | CSS"
+        id="description1"
         description="Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
         livelink="https://kerim-tasci.developerakademie.net/JoinPrivat/html/login.html"
         githublink="https://github.com/S-KerimTasci/Join-Privat">
-    </app-portfolio-element>
-
-    <app-portfolio-element fd="row-reverse" imgURL="../../assets/img/polloloco.png" title="EL POLLO LOCO"
+        </app-portfolio-element>
+    }
+    
+    @if (translationService.isGerman) {
+        <app-portfolio-element fd="row-reverse" imgURL="../../assets/img/polloloco.png" title="EL POLLO LOCO"
         skills="JavaScript | HTML | CSS"
+        id="description2"
+        description="Ein Jump'n'Run-Spiel basierend auf dem objektorientierten Ansatz. Hilf Pepe, Münzen und Salsa zu sammeln, um gegen die verrückte Henne zu kämpfen."
+        livelink="https://kerim-tasci.developerakademie.net/game/index.html"
+        githublink="https://github.com/S-KerimTasci/Game">
+        </app-portfolio-element>
+    }
+    @else {
+        <app-portfolio-element fd="row-reverse" imgURL="../../assets/img/polloloco.png" title="EL POLLO LOCO"
+        skills="JavaScript | HTML | CSS"
+        id="description2"
         description="Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and salsa to fight against the crazy hen."
         livelink="https://kerim-tasci.developerakademie.net/game/index.html"
         githublink="https://github.com/S-KerimTasci/Game">
-    </app-portfolio-element>
+        </app-portfolio-element>
+    }
+    
+    
 
 
 </div>
