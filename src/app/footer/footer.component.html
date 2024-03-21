@@ -11,9 +11,9 @@
     <div class="socials">
         <div class="ATF_styleElement"></div>
 
-        <a href=""><img class="ATF_icon" src="../../assets/img/github.png"></a>
+        <a (click)="visitPageService.visitPage(visitPageService.gitHubLink)"><img class="ATF_icon" src="../../assets/img/github.png"></a>
         <a routerLink="" fragment="contact"><img class="ATF_icon" src="../../assets/img/email.png"></a>
-        <a href=""><img class="ATF_icon" src="../../assets/img/linkedin.png"></a>
+        <a (click)="visitPageService.visitPage(visitPageService.linkedInLink)"><img class="ATF_icon" src="../../assets/img/linkedin.png"></a>
     </div>
 
     <p class="imprintTextRes" routerLink="imprint" fragment="imprint" id="footerImprint">Impressum</p>

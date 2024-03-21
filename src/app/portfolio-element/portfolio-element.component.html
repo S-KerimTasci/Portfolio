@@ -7,10 +7,8 @@
         <span class="skills">{{ skills }}</span>
         <span id="{{ id }}" class="description">{{ description }}</span>
         <div class="buttonDiv">
-            <button (click)="visitPage(livelink)" class="livetestBTN">Live test</button>
-            <button (click)="visitPage(githublink)" class="githubBTN">Github</button>
+            <button (click)="visitPageService.visitPage(livelink)" class="livetestBTN">Live test</button>
+            <button (click)="visitPageService.visitPage(githublink)" class="githubBTN">Github</button>
         </div>
     </div>
 </div>
-<!-- ../../assets/img/join photojoin.png -->
-

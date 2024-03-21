@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SharedDataService } from '../shared-data-headerHeight.service';
+import { VisitPageService } from '../visit-page.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,7 @@ import { SharedDataService } from '../shared-data-headerHeight.service';
 })
 export class FooterComponent implements OnInit, AfterViewInit {
 
-  constructor(private router: Router, private sharedDataService: SharedDataService) { }
+  constructor(private router: Router, private sharedDataService: SharedDataService, public visitPageService: VisitPageService) { }
 
   headerHeight: number = 0;
   

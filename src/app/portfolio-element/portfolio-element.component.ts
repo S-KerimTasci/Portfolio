@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { VisitPageService } from '../visit-page.service';
 
 @Component({
   selector: 'app-portfolio-element',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PortfolioElementComponent {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public visitPageService: VisitPageService) { }
 
   @Input() fd: string = '';
   @Input() imgURL: string = '';
@@ -19,10 +20,4 @@ export class PortfolioElementComponent {
   @Input() description: string = '';
   @Input() livelink: string = '';
   @Input() githublink: string = '';
-  
-
-  visitPage(i: string) {
-    const absoluteUrl = i.startsWith('http://') || i.startsWith('https://') ? i : `http://${i}`;
-    window.open(absoluteUrl, '_blank');
-  }
 }
