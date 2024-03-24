@@ -1,6 +1,6 @@
 <div class="mySkillsDiv" id="mySkills">
     <div class="MS_button_res_div">
-        <button class="MS_button_res" (click)="scrollBottom()">Get in touch</button>
+        <button class="MS_button_res" (click)="sharedDataService.scrollToSection('contact')">Get in touch</button>
     </div>
 
     <div class="iconDiv">
@@ -17,8 +17,11 @@
         </div>
         <span class="MS_text" id="MS_text">
             Während meiner Arbeit an verschiedenen Einzel- und Gruppenprojekten konnte ich mich mit den folgenden
-            Technologien vertraut machen. </span>
-        <button (click)="scrollBottom()">Get in touch</button>
+            Technologien vertraut machen. 
+        </span>
+        <div class="BTNdiv">
+            <button (click)="sharedDataService.scrollToSection('contact')">Get in touch</button>
+        </div>
     </div>
 
 </div>

@@ -20,9 +20,9 @@ export class ContactComponent implements AfterViewInit {
   messageFieldVar: any;
   sendButtonVar: any;
 
-  headerHeight: number = 0;
+  showUpBTN: boolean = true;
 
-  constructor(private sharedDataService: SharedDataService, public translationService: TranslationService) { }
+  constructor(public sharedDataService: SharedDataService, public translationService: TranslationService) { }
 
 
   ngAfterViewInit(): void {
@@ -30,10 +30,6 @@ export class ContactComponent implements AfterViewInit {
     this.emailFieldVar = this.emailField.nativeElement;
     this.messageFieldVar = this.messageField.nativeElement;
     this.sendButtonVar = this.sendButton.nativeElement
-
-    this.sharedDataService.headerHeight$.subscribe((height) => {
-      this.headerHeight = height;
-    });
   }
 
 
@@ -79,12 +75,21 @@ export class ContactComponent implements AfterViewInit {
     this.messageFieldVar.value = '';
   }
 
+  setUpBTNtrue(){
+    this.showUpBTN = true;
+    console.log(this.showUpBTN)
+  }
 
-  scrollTop() {
-    document.documentElement.style.setProperty('--scroll-padding', this.headerHeight - 1 + 'px');
-    console.log(this.headerHeight);
+  setUpBTNfalse(){
+    this.showUpBTN = false;
+    console.log(this.showUpBTN)
+  }
 
-    document.getElementById('ATF')?.scrollIntoView();
+
+
+  toggleUpBtn(){
+    this.showUpBTN = !this.showUpBTN;
+    console.log(this.showUpBTN)
   }
 }
 

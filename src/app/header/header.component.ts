@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component} from '@angular/core';
 import { SharedDataService } from '../shared-data-headerHeight.service';
 import { TranslationService } from '../translation.service';
 
@@ -8,33 +7,10 @@ import { TranslationService } from '../translation.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent{
 
-  headerHeight: any = '';
-  activeRoute :ActivatedRoute = inject(ActivatedRoute);
+  constructor(public sharedDataService: SharedDataService,public translationService: TranslationService) { }
 
-  constructor(private router: Router, private sharedDataService: SharedDataService,public translationService: TranslationService) { }
-
-  ngOnInit() {
-    this.headerHeight = document.getElementById('header')?.offsetHeight;
-    this.sharedDataService.setHeaderHeight(this.headerHeight);
-
-    this.activeRoute.fragment.subscribe((data) => {
-      this.scrollToSection(data)
-  })
-  }
-
-  async scrollToSection(section:any){
-    this.sharedDataService.headerHeight$.subscribe((height) => {
-      this.headerHeight = height;
-    });
-    await document.documentElement.style.setProperty('--scroll-padding', this.headerHeight - 1 + 'px');
-    document.getElementById(section)?.scrollIntoView();
-  }
-
-  navigateToRoute(route: string) {
-    this.router.navigateByUrl(route);
-  }
 
   openResponsiveMenu(){
     document.getElementById('header_res_menu')?.classList.remove('d-none')
@@ -43,6 +19,7 @@ export class HeaderComponent implements OnInit {
     document.getElementById('close_menu')?.classList.remove('d-none')
   }
 
+  
   closeResponsiveMenu(){
     document.getElementById('header_res_menu')?.classList.add('d-none')
     document.getElementById('body')?.classList.remove('overflowHidden')

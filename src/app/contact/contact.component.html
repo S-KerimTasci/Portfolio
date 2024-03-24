@@ -37,19 +37,21 @@
             <label for="cb1" id="formLabel">
                 @if (translationService.isGerman) {
                 Ich habe die 
-                <a routerLink="imprint" fragment="privacyPolicy">Datenschutzrichtlinie</a> 
+                <a routerLink="imprint" (click)="sharedDataService.scrollToSection('privacyPolicy')">Datenschutzrichtlinie</a> 
                 gelesen und stimme der Verarbeitungmeiner Daten gemäß den Bestimmungen zu.
                 }@else {
                 I've read the
-                <a id="formLabelLink" routerLink="imprint" fragment="privacyPolicy">privacy policy</a>
+                <a id="formLabelLink" routerLink="imprint" (click)="sharedDataService.scrollToSection('privacyPolicy')">privacy policy</a>
                 and agree to the processing of my data as outlined.
                 }
             </label>
         </div>
-        <button id="sendButton" #sendButton>Senden</button>
+
+        <div class="BTNdiv">
+            <button id="sendButton" #sendButton>Senden</button>
+        </div>
     </form>
 
-    <img (click)="scrollTop()" class="goUpBtnOrange" src="../../assets/img/goupbtnorange.png">
-    <img (click)="scrollTop()" class="goUpBtn" src="../../assets/img/goupbtnwhite.png">
 
+    <img class="goUpBtnOrange" (click)="sharedDataService.scrollToSection('ATF')"  src="../../assets/img/goupbtnorange.png">    
 </div>

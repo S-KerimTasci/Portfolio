@@ -31,7 +31,6 @@
         background: linear-gradient(0deg, #141D2F, #141D2F),
             linear-gradient(0deg, #E61C40, #E61C40);
         border: 1px solid red;
-
     }
 
     &:not(:focus):not(:placeholder-shown):required:valid {
@@ -90,42 +89,39 @@ textarea {
     height: 504px;
     margin-right: 100px;
     position: relative;
+}
 
-    button {
-        @include font(400, 23px, 27.6px);
-        @include dFlex();
-        font-family: 'Poppins';
-        color: white;
-        width: 253px;
-        height: 58px;
-        padding: 15px 30px 15px 30px;
-        border-radius: 10px;
-        background: #FA7902;
-        box-shadow: 4px 4px 4px 0px #00000040;
+button {
+    @include font(400, 23px, 27.6px);
+    @include dFlex();
+    font-family: 'Poppins';
+    color: white;
+    width: 253px;
+    height: 58px;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    background: #FA7902;
+    box-shadow: 4px 4px 4px 0px #00000040;
 
-        position: absolute;
-        top: 500px;
-
-        &:hover {
-            animation: Contact_buttonHover 250ms ease-in-out forwards;
-        }
+    &:hover {
+        animation: Contact_buttonHover 250ms ease-in-out forwards;
     }
 }
 
-.goUpBtn {
-    position: absolute;
-    right: 100px;
-    bottom: 50px;
-
-    &:hover {
-        display: none;
-    }
+.BTNdiv{
+    min-height: 80px;
 }
 
 .goUpBtnOrange {
     position: absolute;
     right: 100px;
     bottom: 50px;
+
+    &:hover{
+        background-color: #183771;;
+        box-shadow: 0 0 20px #183771;
+        border-radius: 50%;
+    }
 }
 
 .contactFormElement {
@@ -249,18 +245,6 @@ textarea {
         @include dFlex($g: 32px);
         width: 417px;
         height: 504px;
-
-
-        button {
-            @include font(400, 23px, 27.6px);
-            @include dFlex();
-            width: 253px;
-            height: 58px;
-            padding: 15px 30px 15px 30px;
-
-            position: absolute;
-            top: 500px;
-        }
     }
 }
 
@@ -274,18 +258,6 @@ textarea {
         @include dFlex($g: 32px);
         width: 350px;
         height: 504px;
-
-
-        button {
-            @include font(400, 23px, 27.6px);
-            @include dFlex();
-            width: 253px;
-            height: 58px;
-            padding: 15px 30px 15px 30px;
-
-            position: absolute;
-            top: 500px;
-        }
     }
 
     .checkboxDiv {
@@ -332,7 +304,10 @@ textarea {
         width: 500px;
         height: 504px;
         margin-right: 0;
+    }
 
+    .BTNdiv{
+        min-height: 78px;
 
         button {
             @include font(400, 16px, 19.2px);
@@ -356,20 +331,15 @@ textarea {
         }
     }
 
-    .goUpBtn {
-        position: absolute;
-        right: 30px;
-        bottom: 50px;
-
-        &:hover {
-            display: none;
-        }
-    }
-
     .goUpBtnOrange {
         position: absolute;
         right: 30px;
         bottom: 50px;
+
+        &:hover{
+            box-shadow: 0 0 20px #183771;
+            border-radius: 50%;
+        }       
     }
 }
 
@@ -417,19 +387,14 @@ textarea {
         }
     }
 
-    .goUpBtn {
-        position: absolute;
-        right: 30px;
-        bottom: 20px;
-
-        &:hover {
-            display: none;
-        }
-    }
-
     .goUpBtnOrange {
         position: absolute;
         right: 30px;
         bottom: 20px;
+
+        &:hover{
+            box-shadow: 0 0 20px #183771;
+            border-radius: 50%;
+        }
     }
 }

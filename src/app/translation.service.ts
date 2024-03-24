@@ -23,7 +23,7 @@ export class TranslationService {
   translateFromEnglish() {
     document.getElementById('header_AM')!.innerHTML = ('Über mich');
     document.getElementById('res_header_AM')!.innerHTML = ('Über mich');
-    document.getElementById('contact')!.innerHTML = ('Kontakt');
+    document.getElementById('contactHeaderRes')!.innerHTML = ('Kontakt');
 
     if (document.getElementById('AM_header')) {
     document.getElementById('AM_header')!.innerHTML = ('Über mich');
@@ -58,7 +58,7 @@ export class TranslationService {
   translateFromGerman() {
     document.getElementById('header_AM')!.innerHTML = ('About me');
     document.getElementById('res_header_AM')!.innerHTML = ('About me');
-    document.getElementById('contact')!.innerHTML = ('Contact');
+    document.getElementById('contactHeaderRes')!.innerHTML = ('Contact');
 
     if (document.getElementById('AM_header')) { 
     document.getElementById('AM_header')!.innerHTML = ('About me');
@@ -70,7 +70,8 @@ export class TranslationService {
 
     document.getElementById('port_text')!.innerHTML = ('This page is a sample of my work! Scroll down to view other projects I have developed.')
 
-    document.getElementById('conatctHeader')!.innerHTML = ('Contact');
+    document.getElementById('conatctHeader')!.innerHTML = ('Contact');  
+
     document.getElementById('problemHeader')!.innerHTML = ('Got a problem to solve?');
     document.getElementById('contactText')!.innerHTML = ('Contact me through this form. I am looking forward to hearing from you. I would like to learn about your ideas and contribute to your projects with my work.');
     document.getElementById('contactText2')!.innerHTML = ('Need a Frontend developer? <b>Contact me!</b>');

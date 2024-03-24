@@ -15,12 +15,12 @@
                 </div>
             </div>
             <div class="ATF_btn_div">
-                <button (click)="scrollBottom()">Let's talk!</button>
+                <button (click)="sharedDataService.scrollToSection('contact')">Let's talk!</button>
             </div>
         </div>
 
         <div class="scroll">
-            <span (click)="scrollBottom()">Scroll down</span> <img src="../../assets/img/arrow-down-line.png">
+            <span (click)="sharedDataService.scrollToSection('contact')">Scroll down</span> <img src="../../assets/img/arrow-down-line.png">
         </div>
 
     </div>
@@ -29,10 +29,10 @@
         <div class="ATF_styleElement"></div>
 
         <a (click)="visitPageService.visitPage(visitPageService.gitHubLink)"><img class="ATF_icon" src="../../assets/img/github.png"></a>
-        <a (click)="scrollBottom()"><img class="ATF_icon" src="../../assets/img/email.png"></a>
+        <a (click)="sharedDataService.scrollToSection('contact')"><img class="ATF_icon" src="../../assets/img/email.png"></a>
         <a (click)="visitPageService.visitPage(visitPageService.linkedInLink)"><img class="ATF_icon" src="../../assets/img/linkedin.png"></a>
 
-        <a class="socials_mail" (click)="scrollBottom()">contact&#64;kerim-tasci.de</a>
+        <a class="socials_mail" (click)="sharedDataService.scrollToSection('contact')">contact&#64;kerim-tasci.de</a>
     </div>
 
 </div>
