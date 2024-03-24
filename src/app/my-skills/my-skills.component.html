@@ -3,14 +3,14 @@
         <button class="MS_button_res" (click)="sharedDataService.scrollToSection('contact')">Get in touch</button>
     </div>
 
-    <div class="iconDiv">
+    <div data-aos="fade-right" class="iconDiv">
         <div *ngFor="let image of images; let i = index" class="image-container">
             <img src="../../assets/img/mySkillsIcons/{{image}}" alt="Image {{ i + 1 }}">
             <p>{{ titles[i] }}</p>
         </div>
     </div>
 
-    <div class="textDiv">
+    <div data-aos="fade-left" class="textDiv">
         <div class="MS_headerDiv">
             <span class="MS_header">My skills</span>
             <div class="MS_headerElement"></div>

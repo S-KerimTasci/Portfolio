@@ -1,4 +1,4 @@
-<div class="portDiv" id="portfolio">
+<div data-aos="fade-left" class="portDiv" id="portfolio">
     <div class="port_headerDiv">
         <div class="port_headerelement1"></div>
         <span class="port_header">Portfolio</span>
@@ -9,7 +9,7 @@
     </span>
 
     @if (translationService.isGerman) {
-        <app-portfolio-element fd="row" imgURL="../../assets/img/join photojoin.png" title="Join"
+        <app-portfolio-element data-aos="fade-left" fd="row" imgURL="../../assets/img/join photojoin.png" title="Join"
         skills="JavaScript | HTML | CSS"
         id="description1"
         description="Ein Aufgaben Manager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen und weisen Sie diesen Benutzern und Kategorien zu."
@@ -17,7 +17,7 @@
         githublink="https://github.com/S-KerimTasci/Join-Privat">
         </app-portfolio-element>
     }@else {
-        <app-portfolio-element fd="row" imgURL="../../assets/img/join photojoin.png" title="Join"
+        <app-portfolio-element data-aos="fade-left" fd="row" imgURL="../../assets/img/join photojoin.png" title="Join"
         skills="JavaScript | HTML | CSS"
         id="description1"
         description="Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
@@ -27,7 +27,7 @@
     }
     
     @if (translationService.isGerman) {
-        <app-portfolio-element fd="row-reverse" imgURL="../../assets/img/polloloco.png" title="EL POLLO LOCO"
+        <app-portfolio-element data-aos="fade-right" fd="row-reverse" imgURL="../../assets/img/polloloco.png" title="EL POLLO LOCO"
         skills="JavaScript | HTML | CSS"
         id="description2"
         description="Ein Jump'n'Run-Spiel basierend auf dem objektorientierten Ansatz. Hilf Pepe, Münzen und Salsa zu sammeln, um gegen die verrückte Henne zu kämpfen."
@@ -36,7 +36,7 @@
         </app-portfolio-element>
     }
     @else {
-        <app-portfolio-element fd="row-reverse" imgURL="../../assets/img/polloloco.png" title="EL POLLO LOCO"
+        <app-portfolio-element data-aos="fade-right" fd="row-reverse" imgURL="../../assets/img/polloloco.png" title="EL POLLO LOCO"
         skills="JavaScript | HTML | CSS"
         id="description2"
         description="Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and salsa to fight against the crazy hen."
