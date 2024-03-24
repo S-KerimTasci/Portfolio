@@ -3,9 +3,9 @@
     <span class="conatctHeader" id="conatctHeader">Kontakt</span>
 </div>
 
-<div data-aos="fade-right" class="contactDiv">
+<div  class="contactDiv">
     <div class="lds-dual-ring d-none" id="spinner"></div>
-    <div class="contactTextDiv">
+    <div data-aos="fade-right" data-aos-anchor-placement="center-bottom" class="contactTextDiv">
         <span class="contactTextH2" id="problemHeader">Auf der Suche nach einer Lösung für Ihr Problem?</span>
         <span class="contactText" id="contactText">
             Kontaktieren Sie mich. Ich freue mich darauf, von Ihnen zu hören. Ich bin gespannt darauf, mehr über Ihre
@@ -16,7 +16,7 @@
         </span>
     </div>
 
-    <form data-aos="fade-left" class="contactForm" (submit)="sendMail()" ngNativeValidate method="post" #formField>
+    <form data-aos="fade-left" data-aos-anchor-placement="center-bottom" class="contactForm" (submit)="sendMail()" ngNativeValidate method="post" #formField>
         <div class="contactFormElement">
             <input required type="text" name="name" placeholder="Name" id="nameField" #nameField>
             <span class="d-none">Your name is required</span>
