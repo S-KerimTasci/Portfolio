@@ -118,8 +118,8 @@ button {
     bottom: 50px;
 
     &:hover{
-        background-color: #183771;;
-        box-shadow: 0 0 20px #183771;
+        background-color: rgb(255, 71, 71, 0.3);
+        box-shadow: 0 0 20px rgb(255, 71, 71);
         border-radius: 50%;
     }
 }
