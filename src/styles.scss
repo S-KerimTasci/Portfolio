@@ -4,6 +4,7 @@
 html{
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-padding, 100px);
+  overflow-x: hidden;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
   background-color: #141D2F;
   color: white;
   font-family: 'Poppins';
+  overflow-x: hidden;
 }
 
 a {

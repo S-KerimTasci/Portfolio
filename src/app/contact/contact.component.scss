@@ -127,7 +127,6 @@ button {
 .contactFormElement {
     width: 100%;
     @include dFlex($ai: flex-start, $g: 32px);
-    //flex-direction: column;
 
     span {
         color: #E61C40;
@@ -272,7 +271,7 @@ button {
 
 @media (max-width: 840px) {
     .contactDiv {
-        @include dFlex();
+        @include dFlex($g:100px);
         flex-direction: column;
         padding-bottom: 150px;
         background: url("../../assets/img/contactBGres.png");
@@ -345,7 +344,7 @@ button {
 
 @media (max-width: 550px) {
     .contactDiv {
-        @include dFlex();
+        @include dFlex($g:100px);
         flex-direction: column;
         padding-bottom: 150px;
         background: url("../../assets/img/contactBGres.png");
