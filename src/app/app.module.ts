@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainComponent } from './main/main.component';
 import { PortfolioElementComponent } from './portfolio-element/portfolio-element.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { PortfolioElementComponent } from './portfolio-element/portfolio-element
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,8 +3,11 @@
     <span class="conatctHeader" id="conatctHeader">Kontakt</span>
 </div>
 
-<div  class="contactDiv">
-    <div class="lds-dual-ring d-none" id="spinner"></div>
+<div class="contactDiv">
+    @if (showSpinner) {
+        <div class="lds-dual-ring" id="spinner"></div>
+    }
+    
     <div data-aos="fade-right" data-aos-anchor-placement="center-bottom" class="contactTextDiv">
         <span class="contactTextH2" id="problemHeader">Auf der Suche nach einer Lösung für Ihr Problem?</span>
         <span class="contactText" id="contactText">
@@ -16,42 +19,66 @@
         </span>
     </div>
 
-    <form data-aos="fade-left" data-aos-anchor-placement="center-bottom" class="contactForm" (submit)="sendMail()" ngNativeValidate method="post" #formField>
+
+    <form ngNativeValidate data-aos="fade-left" data-aos-anchor-placement="center-bottom" class="contactForm"
+        (submit)="onSubmit(contactForm)" #contactForm="ngForm">
         <div class="contactFormElement">
-            <input required type="text" name="name" placeholder="Name" id="nameField" #nameField>
-            <span class="d-none">Your name is required</span>
+            <input #name="ngModel" [(ngModel)]="contactData.name" required type="text" name="name" placeholder="Name" id="nameField"
+                #nameField>
+            @if (!name.valid && name.touched) {
+                @if (translationService.isGerman) {
+                    <span>Bitte Namen hinzufügen</span>
+                }@else {
+                    <span >Your name is required</span>
+             }}
         </div>
+
         <div class="contactFormElement">
-            <input required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" type="email" name="message"
-                placeholder="Email" id="emailField" #emailField>
-            <span class="d-none">Your email is required</span>
+            <input #mail="ngModel" [(ngModel)]="contactData.email" required pattern="^.+@.+\..{2,}$" type="email" name="mail"
+                placeholder="Email" id="emailField">
+            @if (!mail.valid && mail.touched) {
+                @if (translationService.isGerman) {
+                    <span>Bitte Email hinzufügen</span>
+                }@else {
+                    <span>Your email is required</span>
+            }}
         </div>
+
         <div class="contactFormElement">
-            <textarea required name="message" id="" cols="30" rows="10" placeholder="Nachricht" id="messageField"
-                #messageField></textarea>
-            <span class="d-none">Your message is empty</span>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="" cols="30"
+                rows="10" placeholder="Nachricht" id="messageField">
+            </textarea>
+            @if (!message.valid && message.touched) {
+                @if (translationService.isGerman) {
+                    <span>Bitte Nachricht hinzufügen</span>
+                }@else {
+                    <span>Your message is empty</span>
+            }}
         </div>
 
         <div class="checkboxDiv">
-            <input required type="checkbox" id="cb1">
+            <input #checkbox required type="checkbox" id="cb1">
             <label for="cb1" id="formLabel">
                 @if (translationService.isGerman) {
-                Ich habe die 
-                <a routerLink="imprint" (click)="sharedDataService.scrollToSection('privacyPolicy')">Datenschutzrichtlinie</a> 
+                Ich habe die
+                <a routerLink="imprint"
+                    (click)="sharedDataService.scrollToSection('privacyPolicy')">Datenschutzrichtlinie</a>
                 gelesen und stimme der Verarbeitungmeiner Daten gemäß den Bestimmungen zu.
                 }@else {
                 I've read the
-                <a id="formLabelLink" routerLink="imprint" (click)="sharedDataService.scrollToSection('privacyPolicy')">privacy policy</a>
+                <a id="formLabelLink" routerLink="imprint"
+                    (click)="sharedDataService.scrollToSection('privacyPolicy')">privacy policy</a>
                 and agree to the processing of my data as outlined.
                 }
             </label>
         </div>
 
         <div class="BTNdiv">
-            <button id="sendButton" #sendButton>Senden</button>
+            <button [disabled]="!(contactForm.valid && checkbox.checked)" type="submit" id="sendButton" #sendButton>Senden</button>
         </div>
     </form>
 
 
-    <img class="goUpBtnOrange" (click)="sharedDataService.scrollToSection('ATF')"  src="../../assets/img/goupbtnorange.png">    
+    <img class="goUpBtnOrange" (click)="sharedDataService.scrollToSection('ATF')"
+        src="../../assets/img/goupbtnorange.png">
 </div>
