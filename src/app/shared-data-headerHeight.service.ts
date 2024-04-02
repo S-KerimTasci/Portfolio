@@ -13,8 +13,6 @@ export class SharedDataService {
     setTimeout(async() => {
       this.headerHeight = document.getElementById('header')?.offsetHeight;
     await document.documentElement.style.setProperty('--scroll-padding', this.headerHeight - 1 + 'px');
-    console.log(this.headerHeight);
-    
     document.getElementById(section)?.scrollIntoView();
     }, 20);
     

@@ -20,10 +20,6 @@ a {
     z-index: 99;
 }
 
-// .logo{
-
-// }
-
 .links {
     @include font(400, 23px, 27.6px);
     @include dFlex($g: 37px);
