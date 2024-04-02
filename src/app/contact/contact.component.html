@@ -4,9 +4,16 @@
 </div>
 
 <div class="contactDiv">
-    @if (showSpinner) {
-        <div class="lds-dual-ring" id="spinner"></div>
+    @if (emailSent) {
+        <div class="emailSent">
+            @if (translationService.isGerman) {
+                <p>Vielen Dank für Ihre Email. <br> Ich werde mich in kürze bei Ihnen melden</p>
+            }@else{
+                <p>Thank you for your email. <br> I will contact you shortly.</p>
+            }
+        </div>
     }
+    
     
     <div data-aos="fade-right" data-aos-anchor-placement="center-bottom" class="contactTextDiv">
         <span class="contactTextH2" id="problemHeader">Auf der Suche nach einer Lösung für Ihr Problem?</span>
@@ -57,7 +64,7 @@
         </div>
 
         <div class="checkboxDiv">
-            <input #checkbox required type="checkbox" id="cb1">
+            <input (click)="checkCheckbox()" #checkbox required type="checkbox" id="cb1">
             <label for="cb1" id="formLabel">
                 @if (translationService.isGerman) {
                 Ich habe die
@@ -74,7 +81,7 @@
         </div>
 
         <div class="BTNdiv">
-            <button [disabled]="!(contactForm.valid && checkbox.checked)" type="submit" id="sendButton" #sendButton>Senden</button>
+            <button [disabled]="!(contactForm.valid && checkboxClicked)" type="submit" id="sendButton" #sendButton>Senden</button>
         </div>
     </form>
 

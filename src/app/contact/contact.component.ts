@@ -12,7 +12,8 @@ import { HttpClient } from '@angular/common/http';
 export class ContactComponent  {
 
   http = inject(HttpClient)
-  showSpinner:boolean = false;
+  checkboxClicked:boolean = false;
+  emailSent:boolean = false;
   
   contactData = {
     name : "",
@@ -42,19 +43,27 @@ export class ContactComponent  {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            this.showSpinner = true
             ngForm.resetForm();
-            setTimeout(() => {
-              this.showSpinner = false
-            }, 1500);
-            
           },
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            this.emailSent = true
+            setTimeout(() => {
+              this.emailSent = false
+            }, 2000);
+          }
+          ,
         });
     }
+  }
+
+  checkCheckbox(){
+    
+    this.checkboxClicked = !this.checkboxClicked;
+    console.log(this.checkboxClicked);
+    
   }
   
   
