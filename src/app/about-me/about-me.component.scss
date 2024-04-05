@@ -17,6 +17,7 @@
 
     flex-direction: column;
     width: 471px;
+    z-index: 4;
     img{
         &:hover {
             animation: zoomIcon 250ms ease-in-out forwards;
@@ -38,6 +39,7 @@
 
 .aboutMePicture{
     @include dFlex();
+    z-index: 4;
 }
 .circle{
     border: 8px solid #FA7902;
