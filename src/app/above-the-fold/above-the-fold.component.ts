@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { VisitPageService } from '../visit-page.service';
 import { SharedDataService } from '../shared-data-headerHeight.service';
 import { Router } from '@angular/router';
@@ -11,11 +11,4 @@ import { Router } from '@angular/router';
 export class AboveTheFoldComponent {
 
   constructor(public visitPageService: VisitPageService, public sharedDataService: SharedDataService, private router: Router) {}
-
-  desktopWith:number = window.innerWidth;
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.desktopWith = event.target.innerWidth;
-  }
 }

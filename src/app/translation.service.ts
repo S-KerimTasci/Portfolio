@@ -46,6 +46,10 @@ export class TranslationService {
     }
   }
 
+  toggleTranslationDirection() {
+    this.isGerman = !this.isGerman;
+  }
+
   translateHeaderFromEnglish() {
     document.getElementById('header_AM')!.innerHTML = ('Über mich');
     document.getElementById('res_header_AM')!.innerHTML = ('Über mich');
@@ -133,9 +137,5 @@ export class TranslationService {
   translateImprintFromGerman(){
     document.getElementById('imprint')!.innerHTML = ('Imprint');
     document.getElementById('privacyPolicy')!.innerHTML = ('Privacy policy');
-  }
-
-  toggleTranslationDirection() {
-    this.isGerman = !this.isGerman;
   }
 }
