@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { VisitPageService } from '../visit-page.service';
 import { SharedDataService } from '../shared-data-headerHeight.service';
+import { TranslationService } from '../translation.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,5 +11,5 @@ import { Router } from '@angular/router';
 })
 export class AboveTheFoldComponent {
 
-  constructor(public visitPageService: VisitPageService, public sharedDataService: SharedDataService, private router: Router) {}
+  constructor(public visitPageService: VisitPageService, public sharedDataService: SharedDataService, private router: Router, public translationService: TranslationService ) {}
 }

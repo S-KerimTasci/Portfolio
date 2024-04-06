@@ -1,40 +1,46 @@
 <div class="ATF_background">
-    <img class="ATF_BG" src="../../assets/img/ATF_BG.png" alt=""> 
+    <img class="ATF_BG" src="../../assets/img/ATF_BG.png" alt="">
 
     <div class="ATF_content" id="ATF">
         <img class="ATF_profile" src="./../../assets/img/ATF.png">
 
-        <div class="iAmDivWithBtn" >
+        <div class="iAmDivWithBtn">
             <div class="iAmDiv">
+                @if (!translationService.isGerman) {
                 <div class="iAm">
                     <span> I am</span>
                 </div>
+                }
                 <div class="nameDiv">
                     <span class="kerimTasci">Kerim Tasci</span>
-                    <span class="frontendDev">FRONTEND DEVELOPER</span>
+                    <span class="frontendDev" id="frontendDev">FRONTEND ENTWICKLER</span>
                 </div>
             </div>
             <div class="ATF_btn_div">
-                <button (click)="sharedDataService.scrollToSection('contact')">Let's talk!</button>
+                    <button (click)="sharedDataService.scrollToSection('contact')">@if (translationService.isGerman) {Kontakt} @else {Let's talk!}</button>
             </div>
         </div>
 
-        
+
 
     </div>
 
     <div class="socials">
         <div class="ATF_styleElement"></div>
 
-        <a (click)="visitPageService.visitPage(visitPageService.gitHubLink)"><img class="ATF_icon" src="../../assets/img/github.png"></a>
-        <a (click)="sharedDataService.scrollToSection('contact')"><img class="ATF_icon" src="../../assets/img/email.png"></a>
-        <a (click)="visitPageService.visitPage(visitPageService.linkedInLink)"><img class="ATF_icon" src="../../assets/img/linkedin.png"></a>
+        <a (click)="visitPageService.visitPage(visitPageService.gitHubLink)"><img class="ATF_icon"
+                src="../../assets/img/github.png"></a>
+        <a href="mailto:contact@kerim-tasci.de"><img class="ATF_icon"
+                src="../../assets/img/email.png"></a>
+        <a (click)="visitPageService.visitPage(visitPageService.linkedInLink)"><img class="ATF_icon"
+                src="../../assets/img/linkedin.png"></a>
 
-        <a class="socials_mail" (click)="sharedDataService.scrollToSection('contact')">contact&#64;kerim-tasci.de</a>
+        <a href="mailto:contact@kerim-tasci.de" class="socials_mail">contact&#64;kerim-tasci.de</a>
     </div>
 
 
     <div class="scroll">
-        <span (click)="sharedDataService.scrollToSection('contact')">Scroll down</span> <img src="../../assets/img/arrow-down-line.png">
+        <span (click)="sharedDataService.scrollToSection('contact')">@if (translationService.isGerman) {Mehr erfahren} @else {Scroll down} </span> <img
+            src="../../assets/img/arrow-down-line.png">
     </div>
 </div>

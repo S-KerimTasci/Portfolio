@@ -20,6 +20,7 @@ export class TranslationService {
 
     if (document.getElementById('AM_header')) {
       this.translateAboutMeFromEnglish();
+      this.translateATFfromEnglish();
       this.translateMySkillsFromEnglish();
       this.translatePortfolioFromEnglish();
       this.translateContactFromEnglish();
@@ -35,6 +36,7 @@ export class TranslationService {
 
     if (document.getElementById('AM_header')) {
       this.translateAboutMeFromGerman();
+      this.translateATFfromGerman();
       this.translateMySkillsFromGerman();
       this.translatePortfolioFromGerman();
       this.translateContactFromGerman();
@@ -54,6 +56,10 @@ export class TranslationService {
     document.getElementById('header_AM')!.innerHTML = ('Über mich');
     document.getElementById('res_header_AM')!.innerHTML = ('Über mich');
     document.getElementById('contactHeaderRes')!.innerHTML = ('Kontakt');
+  }
+
+  translateATFfromEnglish(){
+    document.getElementById('frontendDev')!.innerHTML = ('FRONTEND ENTWICKLER')
   }
 
   translateAboutMeFromEnglish() {
@@ -98,6 +104,10 @@ export class TranslationService {
     document.getElementById('header_AM')!.innerHTML = ('About me');
     document.getElementById('res_header_AM')!.innerHTML = ('About me');
     document.getElementById('contactHeaderRes')!.innerHTML = ('Contact');
+  }
+
+  translateATFfromGerman(){
+    document.getElementById('frontendDev')!.innerHTML = ('FRONTEND DEVELOPER')
   }
 
   translateAboutMeFromGerman() {
