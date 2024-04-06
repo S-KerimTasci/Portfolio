@@ -39,6 +39,7 @@
         @include dFlex($g: 10px);
         @include font(400, 23px, 27.6px);
         color: white;
+        border: none;
         padding: 15px 30px 15px 30px;
         border-radius: 10px;
 
@@ -57,7 +58,7 @@
 .githubBTN {
     width: 137px;
     height: 58px;
-    border: 1px solid #FA7902;
+    border: 1px solid #FA7902 !important;
     background-color: transparent;
 }
 
