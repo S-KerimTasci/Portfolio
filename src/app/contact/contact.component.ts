@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { SharedDataService } from '../shared-data-headerHeight.service';
 import { TranslationService } from '../translation.service';
 import { NgForm } from '@angular/forms';
@@ -19,6 +19,15 @@ export class ContactComponent  {
     name : "",
     email : "",
     message : "",
+  }
+
+  @ViewChild('checkbox') checkbox! :ElementRef;
+
+  checkboxVar:any;
+
+  
+  ngAfterViewInit(): void {
+    this.checkboxVar = this.checkbox!.nativeElement;
   }
 
   constructor(public sharedDataService: SharedDataService, public translationService: TranslationService) { }
@@ -62,10 +71,14 @@ export class ContactComponent  {
   }
 
   emailComplete(){
+    this.checkboxVar.checked = false;
+    this.checkboxClicked = false;
+    
     this.emailSent = true
     setTimeout(() => {
       this.emailSent = false
     }, 2000);
+
   }
 }
 
