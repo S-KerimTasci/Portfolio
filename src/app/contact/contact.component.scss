@@ -243,6 +243,10 @@ button {
 }
 
 @media (max-width: 840px) {
+    .common-input-properties {
+        width: 88%;
+    }
+
     .contactDiv {
         @include dFlex($g:100px);
         flex-direction: column;
@@ -316,6 +320,10 @@ button {
 }
 
 @media (max-width: 550px) {
+    .common-input-properties {
+        width: 80%;
+    }
+    
     .contactDiv {
         @include dFlex($g:100px);
         flex-direction: column;
