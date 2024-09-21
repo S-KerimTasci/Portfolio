@@ -44,4 +44,23 @@
         githublink="https://github.com/S-KerimTasci/Game">
         </app-portfolio-element>
     }
+
+    @if (translationService.isGerman) {
+        <app-portfolio-element fd="row" imgURL="../../assets/img/polloloco.png" title="DA-Bubble"
+        skills="Angular | HTML | SCSS | TypeScript | Firebase"
+        id="description3"
+        description="Ein kollaboratives Chat-System im Stil von Slack, das effiziente Teamkommunikation und vertrauliche Einzelgespräche kombiniert."
+        livelink="https://chatapp.kerim-tasci.de/"
+        githublink="https://github.com/S-KerimTasci/Own-DA-Bubble">
+        </app-portfolio-element>
+    }
+    @else {
+        <app-portfolio-element fd="row" imgURL="../../assets/img/polloloco.png" title="DA-Bubble"
+        skills="Angular | HTML | SCSS | TypeScript | Firebase"
+        id="description3"
+        description="A collaborative chat system in the style of Slack, combining efficient team communication and confidential one-on-one conversations."
+        livelink="https://chatapp.kerim-tasci.de/"
+        githublink="https://github.com/S-KerimTasci/Own-DA-Bubble">
+        </app-portfolio-element>
+    }
 </div>
